@@ -3,8 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
-    public function __construct() 
-    {
+    public function __construct() {
         Parent::__construct();
 
         if (empty($this->session->admin)) {
@@ -13,16 +12,14 @@ class Admin extends CI_Controller {
 
     }
 
-    public function index()
-	{
+    public function index(){
         $this->load->model('Agenda_model');
         $dados ['agenda'] = $this->Agenda_model->get();
         $this-> load -> view ("admin", $dados);
 
     }
 
-    public function cadastro()
-    {
+    public function cadastro(){
         $nome = $this->input->post('nome');
         $endereco = $this->input->post('endereco');
         $descricao = $this->input->post('descricao');
@@ -42,5 +39,16 @@ class Admin extends CI_Controller {
 
         echo "cadastrado";
     }
+
+    public function deletar(){
+        
+        $id = $this->uri->segment(3);
+        $this->load->model('Agenda_model');
+
+        $this->Agenda_model->delete($id);
+        redirect('/admin');
+
+    }
+
 
 }
