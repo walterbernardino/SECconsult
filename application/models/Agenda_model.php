@@ -14,6 +14,11 @@ class Agenda_model extends CI_Model{
         $this->db->update('agenda', $dados);
     }
 
+    public function get()
+    {
+        return $this->db->get('agenda')->result_array();
+    }
+
 }
 
 

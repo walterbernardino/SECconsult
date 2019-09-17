@@ -26,11 +26,14 @@ class Admin extends CI_Controller {
         $nome = $this->input->post('nome');
         $endereco = $this->input->post('endereco');
         $descricao = $this->input->post('descricao');
+        $telefone = $this->input->post('telefone');
         $dt = $this->input->post('data');
+
     
         $cadastro['nome'] = $nome;
         $cadastro['dateAgenda'] = $dt;
         $cadastro['descricao'] = $descricao;
+        $cadastro['telefone'] = $telefone;
         $cadastro['endereco'] = $endereco;
 
         $this -> load -> model('Agenda_model');
