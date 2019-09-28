@@ -13,7 +13,6 @@ class Login extends CI_Controller {
 	public function RealizarLogin () {
 
 		$email = $this-> input -> post ("login");
-
 		$senha = md5($this-> input -> post ("senha"));
 
 		$this->load->model('Pessoa_model');
