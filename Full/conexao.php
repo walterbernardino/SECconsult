@@ -2,6 +2,6 @@
 	$servidor = "localhost";
 	$usuario = "root";
 	$senha = "root";
-	$dbname = "sec";
+	$dbname = "secconsult";
 	
 	$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);

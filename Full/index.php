@@ -151,7 +151,6 @@ $resultado_events = mysqli_query($conn, $result_events);
 							<dd id="end"></dd>
 						</dl>
 							<button class="btn btn-canc-vis btn-warning">Editar</button>
-							<a href="" id="apagar_evento" class="btn btn-danger" role="button">Apagar</a>
 						</div>
 						
 						<div class="form">

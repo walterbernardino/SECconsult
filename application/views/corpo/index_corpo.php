@@ -1,6 +1,6 @@
 <div class="container-fluid">
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 <meta charset='utf-8' />
 <link href='<?php echo base_url(); ?>calendar/packages/core/main.css' rel='stylesheet' />
