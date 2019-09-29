@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once("conexao.php");
-$result_events = "SELECT id, title, endereco, telefone, color, start, end FROM eventos";
+$result_events = "SELECT id, title, cpf, endereco, telefone, color, start, end FROM eventos";
 $resultado_events = mysqli_query($conn, $result_events);
 ?>
 <!DOCTYPE html>
@@ -38,6 +38,8 @@ $resultado_events = mysqli_query($conn, $result_events);
 						$('#visualizar #id').val(event.id);
 						$('#visualizar #title').text(event.title);
 						$('#visualizar #title').val(event.title);
+						$('#visualizar #cpf').text(event.cpf);
+						$('#visualizar #cpf').val(event.cpf);
 						$('#visualizar #endereco').text(event.endereco);
 						$('#visualizar #endereco').val(event.endereco);
 						$('#visualizar #telefone').text(event.telefone);
@@ -66,6 +68,7 @@ $resultado_events = mysqli_query($conn, $result_events);
 								{
 								id: '<?php echo $row_events['id']; ?>',
 								title: '<?php echo $row_events['title']; ?>',
+								cpf: '<?php echo $row_events['cpf']; ?>',
 								endereco: '<?php echo $row_events['endereco']; ?>',
 								telefone: '<?php echo $row_events['telefone']; ?>',
 								start: '<?php echo $row_events['start']; ?>',
@@ -110,6 +113,8 @@ $resultado_events = mysqli_query($conn, $result_events);
 					event.returnValue = false;
 				}
 			}
+			
+		
 		</script>
 	</head>
 	<body>
@@ -141,6 +146,8 @@ $resultado_events = mysqli_query($conn, $result_events);
 							<dd id="id"></dd>
 							<dt>Nome do Paciente</dt>
 							<dd id="title"></dd>
+							<dt>Cpf do Paciente</dt>
+							<dd id="cpf"></dd>
 							<dt>Endereço do Paciente</dt>
 							<dd id="endereco"></dd>
 							<dt>Telefone do Paciente</dt>
@@ -161,6 +168,13 @@ $resultado_events = mysqli_query($conn, $result_events);
 										<input type="text" class="form-control" name="title" id="title" placeholder="Nome do paciente">
 									</div>
 								</div>
+
+								<div class="form-group">
+    							<label for="nome" class="col-sm-4 control-label">Cpf do Paciente</label>
+    							<div class="col-sm-8">
+      							<input type="text" class="form-control" name="cpf" id="cpf" placeholder="Cpf do Paciente">
+    							</div>
+  								</div>
 
 								<div class="form-group">
     							<label for="nome" class="col-sm-4 control-label">Endereço do Paciente</label>
@@ -230,6 +244,13 @@ $resultado_events = mysqli_query($conn, $result_events);
     							<label for="nome" class="col-sm-4 control-label">Nome do Paciente</label>
     							<div class="col-sm-8">
       							<input type="text" class="form-control" name="title" placeholder="Nome do Paciente">
+    							</div>
+  					</div>
+
+					  <div class="form-group">
+    							<label for="nome" class="col-sm-4 control-label">Cpf do Paciente</label>
+    							<div class="col-sm-8">
+      							<input type="text" class="form-control" name="cpf" placeholder="cpf do Paciente">
     							</div>
   					</div>
 

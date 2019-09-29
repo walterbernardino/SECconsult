@@ -5,13 +5,14 @@ session_start();
 include_once("conexao.php");
 
 $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
+$cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_STRING);
 $endereco = filter_input(INPUT_POST, 'endereco', FILTER_SANITIZE_STRING);
 $telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING);
 $color = filter_input(INPUT_POST, 'color', FILTER_SANITIZE_STRING);
 $start = filter_input(INPUT_POST, 'start', FILTER_SANITIZE_STRING);
 $end = filter_input(INPUT_POST, 'end', FILTER_SANITIZE_STRING);
 
-if(!empty($title) && !empty($endereco) && !empty($telefone) && !empty($color) && !empty($start) && !empty($end)){
+if(!empty($title)  && !empty($cpf) && !empty($endereco) && !empty($telefone) && !empty($color) && !empty($start) && !empty($end)){
 	//Converter a data e hora do formato brasileiro para o formato do Banco de Dados
 	$data = explode(" ", $start);
 	list($date, $hora) = $data;
@@ -25,7 +26,7 @@ if(!empty($title) && !empty($endereco) && !empty($telefone) && !empty($color) &&
 	$data_sem_barra = implode("-", $data_sem_barra);
 	$end_sem_barra = $data_sem_barra . " " . $hora;
 	
-	$result_events = "INSERT INTO eventos (title, endereco, telefone, color, start, end) VALUES ('$title', '$endereco','$telefone', '$color', '$start_sem_barra', '$end_sem_barra')";
+	$result_events = "INSERT INTO eventos (title, cpf, endereco, telefone, color, start, end) VALUES ('$title', '$cpf', '$endereco','$telefone', '$color', '$start_sem_barra', '$end_sem_barra')";
 	$resultado_events = mysqli_query($conn, $result_events);
 	
 	//Verificar se salvou no banco de dados através "mysqli_insert_id" o qual verifica se existe o ID do último dado inserido

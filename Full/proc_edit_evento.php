@@ -6,13 +6,14 @@ include_once("conexao.php");
 
 $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
 $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
+$cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_STRING);
 $endereco = filter_input(INPUT_POST, 'endereco', FILTER_SANITIZE_STRING);
 $telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING);
 $color = filter_input(INPUT_POST, 'color', FILTER_SANITIZE_STRING);
 $start = filter_input(INPUT_POST, 'start', FILTER_SANITIZE_STRING);
 $end = filter_input(INPUT_POST, 'end', FILTER_SANITIZE_STRING);
 
-if(!empty($id) && !empty($title) && !empty($endereco) && !empty($telefone) && !empty($color) && !empty($start) && !empty($end)){
+if(!empty($id) && !empty($title) && !empty($cpf)  && !empty($endereco) && !empty($telefone) && !empty($color) && !empty($start) && !empty($end)){
 	//Converter a data e hora do formato brasileiro para o formato do Banco de Dados
 	$data = explode(" ", $start);
 	list($date, $hora) = $data;
@@ -26,7 +27,7 @@ if(!empty($id) && !empty($title) && !empty($endereco) && !empty($telefone) && !e
 	$data_sem_barra = implode("-", $data_sem_barra);
 	$end_sem_barra = $data_sem_barra . " " . $hora;
 	
-	$result_events = "UPDATE eventos SET title='$title', endereco='$endereco', telefone='$telefone', color='$color', start='$start_sem_barra', end='$end_sem_barra' WHERE id='$id'"; 
+	$result_events = "UPDATE eventos SET title='$title', cpf='$cpf', endereco='$endereco', telefone='$telefone', color='$color', start='$start_sem_barra', end='$end_sem_barra' WHERE id='$id'"; 
 	$resultado_events = mysqli_query($conn, $result_events);
 	
 	//Verificar se alterou no banco de dados através "mysqli_affected_rows"
