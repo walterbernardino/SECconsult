@@ -113,6 +113,19 @@ $resultado_events = mysqli_query($conn, $result_events);
 					event.returnValue = false;
 				}
 			}
+
+			//function maskCpf(el){
+				//vCampos(el /[^0-9\.\-] /g);
+
+				//if(event.keyCode != 8){
+				//	if(e.length == 3)
+				//		$el.val (e + '.');
+				//	if(e.length == 7)
+				//		$el.val (e + '.');
+				//	if(e.length == 11)
+				//		$el.val (e + '-');
+			//	}
+			//}
 			
 		
 		</script>

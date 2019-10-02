@@ -22,7 +22,7 @@
         center: 'title',
         right: 'timeGridWeek'
       },
-      defaultDate: '2019-08-12',
+      defaultDate: '2019-09-30',
       navLinks: true, // can click day/week names to navigate views
       selectable: true,
       selectMirror: true,
