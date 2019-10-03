@@ -50,7 +50,7 @@
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('index-corpo'); ?>">
-                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fas fa-clinic-medical"></i>
                         <span>Resumo</span></a>
                 </li>
 
@@ -60,7 +60,7 @@
                 
                 <li class="nav-item">
                 <a class="nav-link" href="#">
-                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                <i class="fas fa-user-plus"></i>
                         <span>Cadastro</span></a>
                 </li>
                 
@@ -70,14 +70,14 @@
                 <!-- Nav Item - Pages Collapse Menu -->
                 <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('agenda-cad'); ?>">
-                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                <i class="fas fa-calendar-plus"></i>
                         <span>Agenda</span></a>
                 </li>
                 
                 <hr class="sidebar-divider">
                 <li class="nav-item">
                 <a class="nav-link" href="#">
-                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                <i class="fas fa-file"></i>
                         <span>Relatorio</span></a>
                 </li>
                 <!-- Divider -->

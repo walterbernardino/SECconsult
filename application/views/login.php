@@ -24,7 +24,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>login/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>login/css/util.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>login/css/main.css">
+	<!--<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>login/css/main.css">-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>login/css/per.css">
 <!--===============================================================================================-->
 </head>
 <body>
