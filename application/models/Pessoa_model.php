@@ -11,5 +11,10 @@ class Pessoa_model extends CI_Model{
             return $dados['id'];
         }
     }
+    
+    public function getTipo()
+    {
+        return $this->db->get_where('pessoa', array('id' => $this->session->admin))->row_array();
+    }
 }
 ?>

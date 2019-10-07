@@ -1,6 +1,5 @@
-<div class="container-fluid">
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
 <meta charset='utf-8' />
 <link href='<?php echo base_url(); ?>calendar/packages/core/main.css' rel='stylesheet' />
@@ -20,10 +19,9 @@
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'timeGridWeek'
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
       },
-      
-      defaultDate: '2019-09-30',
+      defaultDate: '2019-08-12',
       navLinks: true, // can click day/week names to navigate views
       selectable: true,
       selectMirror: true,
@@ -42,7 +40,60 @@
       editable: true,
       eventLimit: true, // allow "more" link when too many events
       events: [
-       
+        {
+          title: 'All Day Event',
+          start: '2019-08-01'
+        },
+        {
+          title: 'Long Event',
+          start: '2019-08-07',
+          end: '2019-08-10'
+        },
+        {
+          groupId: 999,
+          title: 'Repeating Event',
+          start: '2019-08-09T16:00:00'
+        },
+        {
+          groupId: 999,
+          title: 'Repeating Event',
+          start: '2019-08-16T16:00:00'
+        },
+        {
+          title: 'Conference',
+          start: '2019-08-11',
+          end: '2019-08-13'
+        },
+        {
+          title: 'Meeting',
+          start: '2019-08-12T10:30:00',
+          end: '2019-08-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '2019-08-12T12:00:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2019-08-12T14:30:00'
+        },
+        {
+          title: 'Happy Hour',
+          start: '2019-08-12T17:30:00'
+        },
+        {
+          title: 'Dinner',
+          start: '2019-08-12T20:00:00'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2019-08-13T07:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/',
+          start: '2019-08-28'
+        }
       ]
     });
 
@@ -72,4 +123,3 @@
 
 </body>
 </html>
-</div>
