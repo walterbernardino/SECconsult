@@ -16,7 +16,8 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
         <!-- Custom styles for this template-->
-        <link href="<?php echo base_url('bootstrap/css/sb-admin-2.min.css'); ?>" rel="stylesheet">
+        <!-- <link href="<?php echo base_url('bootstrap/css/sb-admin-2.min.css'); ?>" rel="stylesheet"> -->
+        <link href="<?php echo base_url('bootstrap/css/pers.css'); ?>" rel="stylesheet">
         <script src="<?php echo base_url('bootstrap/vendor/jquery/jquery.min.js'); ?>"></script>
         <script src="<?php echo base_url('bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 
@@ -40,32 +41,21 @@
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                     <div class="sidebar-brand-icon rotate-n-15">
                     </div>
-                    <i class="fas fa-stethoscope"></i>
+                    <i class="fas fa-plus-square"></i>
                     <div class="sidebar-brand-text mx-3">SECconsult</div>
                 </a>
 
                 <!-- Divider -->
                 <hr class="sidebar-divider my-0">
                 
-                <?php if($tipo['tipo'] != 0):?>  
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('index-corpo'); ?>">
                     <i class="fas fa-clinic-medical"></i>
                         <span>Resumo</span></a>
                 </li>
-                <?php endif;?>
+             
 
-                 <?php if($tipo['tipo'] == 0):?>   
-                <!-- Divider -->
-                <hr class="sidebar-divider">
-                
-                <li class="nav-item">
-                <a class="nav-link" href="#">
-                <i class="fas fa-user-plus"></i>
-                        <span>Cadastro</span></a>
-                </li>
-                <?php endif;?>
 
                 <?php if($tipo['tipo'] == 0):?>
                 <hr class="sidebar-divider">
@@ -76,12 +66,22 @@
                         <span>Agenda</span></a>
                 </li>
                 <?php endif;?>
+
+                <?php if($tipo['tipo'] == 0):?>
+                <hr class="sidebar-divider">
+
+                <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('agenda-cad'); ?>">
+                <i class="fas fa-chart-pie"></i>
+                        <span>Relatorio</span></a>
+                </li>
+                <?php endif;?>
                 
                 <?php if($tipo['tipo'] != 0):?>
                 <hr class="sidebar-divider">
                 
                 <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="<?php echo base_url('Prontuario'); ?>">
                 <i class="fas fa-file"></i>
                         <span>Prontuario</span></a>
                 </li>

@@ -24,7 +24,7 @@ $resultado_events = mysqli_query($conn, $result_events);
 					header: {
 						left: 'prev,next today',
 						center: 'title',
-						right: 'month,agendaWeek,agendaDay'
+						right: 'month,agendaWeek,agendaDay,listWeek'
 					},
 					defaultDate: Date(),
 					navLinks: true, // can click day/week names to navigate views
