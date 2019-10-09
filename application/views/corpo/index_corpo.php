@@ -1,47 +1,92 @@
-<div class="container-fluid">
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
 <meta charset='utf-8' />
 <link href='<?php echo base_url(); ?>calendar/packages/core/main.css' rel='stylesheet' />
-<link href='<?php echo base_url(); ?>calendar/packages/daygrid/main.css' rel='stylesheet' />
-<link href='<?php echo base_url(); ?>calendar/packages/timegrid/main.css' rel='stylesheet' />
+<link href='<?php echo base_url(); ?>calendar/packages/list/main.css' rel='stylesheet' />
 <script src='<?php echo base_url(); ?>calendar/packages/core/main.js'></script>
-<script src='<?php echo base_url(); ?>calendar/packages/interaction/main.js'></script>
-<script src='<?php echo base_url(); ?>calendar/packages/daygrid/main.js'></script>
-<script src='<?php echo base_url(); ?>calendar/packages/timegrid/main.js'></script>
+<script src='<?php echo base_url(); ?>calendar/packages/list/main.js'></script>
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
+      plugins: [ 'list' ],
+
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'timeGridWeek'
+        right: 'listDay,listWeek,dayGridMonth'
       },
-      defaultDate: '2019-09-30',
+
+      // customize the button names,
+      // otherwise they'd all just say "list"
+      views: {
+        listDay: { buttonText: 'list day' },
+        listWeek: { buttonText: 'list week' }
+      },
+
+      defaultView: 'listWeek',
+      defaultDate: '2019-10-09',
       navLinks: true, // can click day/week names to navigate views
-      selectable: true,
-      selectMirror: true,
-      select: function(arg) {
-        var title = prompt('Event Title:');
-        if (title) {
-          calendar.addEvent({
-            title: title,
-            start: arg.start,
-            end: arg.end,
-            allDay: arg.allDay
-          })
-        }
-        calendar.unselect()
-      },
       editable: true,
       eventLimit: true, // allow "more" link when too many events
       events: [
-       
+        {
+          title: 'All Day Event',
+          start: '2019-10-08'
+        },
+        {
+          title: 'Long Event',
+          start: '2019-10-08',
+          end: '2019-10-08'
+        },
+        {
+          groupId: 999,
+          title: 'Repeating Event',
+          start: '2019-08-09T16:00:00'
+        },
+        {
+          groupId: 999,
+          title: 'Repeating Event',
+          start: '2019-08-16T16:00:00'
+        },
+        {
+          title: 'Conference',
+          start: '2019-08-11',
+          end: '2019-08-13'
+        },
+        {
+          title: 'Meeting',
+          start: '2019-08-12T10:30:00',
+          end: '2019-08-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '2019-08-12T12:00:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2019-08-12T14:30:00'
+        },
+        {
+          title: 'Happy Hour',
+          start: '2019-08-12T17:30:00'
+        },
+        {
+          title: 'Dinner',
+          start: '2019-08-12T20:00:00'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2019-08-13T07:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/',
+          start: '2019-08-28'
+        }
       ]
     });
 
@@ -52,7 +97,7 @@
 <style>
 
   body {
-    margin: 0px 0px;
+   
     padding: 0;
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 14px;
@@ -71,4 +116,3 @@
 
 </body>
 </html>
-</div>

@@ -22,35 +22,32 @@
     }
     </style>
 
-    
 <table class="table">
+  <thead class="thead-dark">
     <tr>
-        <td>id</td>
-        <td>Descrição</td>
-        <td>cpf</td>
-        <td>Endereco</td>
-        <td>telefone</td>
-        <td>cor</td>
-        <td>Data</td>
-        <td>fim</td>
+      <th scope="col">Nome</th>
+      <th scope="col">Cpf</th>
+      <th scope="col">Endereço</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Data</th>
+      <th scope="col"></th>
     </tr>
-    
-        <?php foreach ($eventos as $key): ?>
+  </thead>
+  <tbody>
+    <?php foreach ($eventos as $key): ?>
         <tr>
-           <td><?php echo $key['id']; ?></td>
-            <td><?php echo $key['title']; ?></td>
+        
+        <th scope="row"><?php echo $key['title']; ?></th>
             <td><?php echo $key['cpf']; ?></td>
             <td><?php echo $key['endereco']; ?></td>
             <td><?php echo $key['telefone']; ?></td>
-            <td><?php echo $key['color']; ?></td>
             <td><?php echo $key['start']; ?></td>
-            <td><?php echo $key['end']; ?></td>
+            <td><button type="button" class="btn btn-primary">viualizar</button></td>
         </tr>
         <?php endforeach;?>
+  </tbody>
 </table>
 
- <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
