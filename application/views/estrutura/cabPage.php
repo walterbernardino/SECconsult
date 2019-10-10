@@ -54,7 +54,11 @@
                     <i class="fas fa-clinic-medical"></i>
                         <span>Resumo</span></a>
                 </li>
-             
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('Login/sair'); ?>">
+                    <i class="fas fa-clinic-medical"></i>
+                        <span>Sair</span></a>
+                </li>-->
 
 
                 <?php if($tipo['tipo'] == 0):?>

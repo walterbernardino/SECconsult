@@ -9,8 +9,15 @@ class Admin extends CI_Controller {
 
         $dt['tipo'] = $this->pessoa_model->getTipo();
 
+        $dt2 = $this->pessoa_model->getTipo();
+        if ($dt2['tipo'] == 0) {
+
         $this->load->view('estrutura/cabPage',$dt);
         $this->load->view('corpo/index_corpo');
         $this->load->view('estrutura/rodapePage');
+        } else {
+           redirect('./Prontuario/index');
+        }
+
     }
 }

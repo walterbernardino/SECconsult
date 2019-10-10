@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset='utf-8' />
+<meta charset='utf-8' >
 <link href='<?php echo base_url(); ?>calendar/packages/core/main.css' rel='stylesheet' />
 <link href='<?php echo base_url(); ?>calendar/packages/list/main.css' rel='stylesheet' />
 <script src='<?php echo base_url(); ?>calendar/packages/core/main.js'></script>
