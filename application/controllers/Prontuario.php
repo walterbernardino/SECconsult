@@ -26,7 +26,16 @@ class Prontuario extends CI_Controller{
             
     }
 
-    public function atualizarPaciente(){
+    public function salvar(){
+        
+        $this->load->model('Prontuario_model');
+        $dados = array (
+            'id' => $this->input->post('id'),
+            'prontuario' => $this->input->post('prontuario')
+        );
+
+        $r = $this->Prontuario_model->insert($dados['id'],$dados['prontuario']);
+        echo Json_encode($r);
 
     }
 

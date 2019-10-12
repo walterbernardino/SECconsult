@@ -17,6 +17,7 @@ $resultado_events = mysqli_query($conn, $result_events);
 		<script src='js/bootstrap.min.js'></script>
 		<script src='js/moment.min.js'></script>
 		<script src='js/fullcalendar.min.js'></script>
+		<script src='js/jquery.mask.js'></script>
 		<script src='locale/pt-br.js'></script>
 		<script>
 			$(document).ready(function() {
@@ -252,9 +253,16 @@ $resultado_events = mysqli_query($conn, $result_events);
 					  <div class="form-group">
     							<label for="nome" class="col-sm-4 control-label">Cpf do Paciente</label>
     							<div class="col-sm-8">
-      							<input type="text" class="form-control" name="cpf" placeholder="cpf do Paciente">
+      							<input type="text" class="form-control cpf" name="cpf" placeholder="cpf do Paciente">
     							</div>
   					</div>
+
+					  <script>
+						 
+						 $('.cpf').mask('000.000.000-00', {reverse: true});
+
+						 
+					  </script>
 
   					<div class="form-group">
     							<label for="nome" class="col-sm-4 control-label">Endereço do Paciente</label>
@@ -266,9 +274,15 @@ $resultado_events = mysqli_query($conn, $result_events);
   					<div class="form-group">
     							<label for="nome" class="col-sm-4 control-label">Telefone do Paciente</label>
     							<div class="col-sm-8">
-      							<input type="text" class="form-control" name="telefone" placeholder="Telefone do Paciente">
+      							<input type="text" class="form-control phone" name="telefone" placeholder="Telefone do Paciente">
     							</div>
   					</div>
+
+					  <script>
+					 
+					 $('.phone').mask('(00) 00000-0000');
+					 
+					 </script>
 
   					<div class="form-group">
     							<label for="nome" class="col-sm-4 control-label">Situação da consulta</label>

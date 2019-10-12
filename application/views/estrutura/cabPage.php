@@ -18,6 +18,7 @@
         <!-- Custom styles for this template-->
         <!-- <link href="<?php echo base_url('bootstrap/css/sb-admin-2.min.css'); ?>" rel="stylesheet"> -->
         <link href="<?php echo base_url('bootstrap/css/pers.css'); ?>" rel="stylesheet">
+        <script src="<?php echo base_url('bootstrap/js/jquery.mask.js'); ?>"></script>
         <script src="<?php echo base_url('bootstrap/vendor/jquery/jquery.min.js'); ?>"></script>
         <script src="<?php echo base_url('bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 

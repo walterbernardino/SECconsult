@@ -15,11 +15,11 @@
 
 
 <?php foreach ($eventos as $key): ?>
-<div class="modal fade bd-example-modal-lg<?php echo $key['id']; ?>" id="modalCadastrarEscola" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+<div class="modal fade bd-example-modal-xl<?php echo $key['id']; ?>" id="modalCadastrarEscola" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title h4" id="mySmallModalLabel">Dados do Paciente</h5>
+                <h5 class="modal-title h5" id="mySmallModalLabel">Dados do Paciente</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -28,7 +28,7 @@
                 <div class="alert alert-success d-none" id="sucesso" role="alert">
                    Pronruario Cadastrado com sucesso!
                 </div>
-                <form method="POST" id="formCadastrarEscola" action="javascript:func()">
+                <form method="POST" class="formCadastrarEscola">
                     <div class=" form-row">
                         <div class="col-12 col-sm-4 col-md-12">
                             <h5>Nome :</h5>
@@ -37,7 +37,7 @@
                         </div>
                        
                     </div>
-
+                    <input type="hidden" name="id" value="<?=$key['id']?>">
                     <div class="form-row">
                         <div class="col-12 col-sm-3 col-md-3">
                             <!--<label>CPF</label>
@@ -45,7 +45,8 @@
                             <h5>cpf :</h5>
                             <?php echo $key['cpf']; ?>
                         </div>
-
+                        
+                        
                         <div class="col-12 col-sm-6 col-md-9">
                             <!--<label>Endereço</label>
                             <input type="text" name="esc_cidade" id="esc_cidade" class="form-control" required>-->
@@ -69,11 +70,13 @@
                             <?php echo $key['start']; ?>
                         </div>
 
-                        <div class="col-12 col-sm-12 col-md-12">
-                            <h5>Prontuario :</h5>
-                            <input type="text" name="prontuario" id="prontuario" class="form-control" required>
-                            
+                    <div class="col-12 col-sm-12 col-md-12">
+                        <div class="input-group-prepend">
+                        <h5>Prontuario :</h5>
                         </div>
+                        <textarea name="prontuario" id="prontuario" class="form-control" aria-label="With textarea" rows="8" cols="50"></textarea>
+                    </div>
+
                     </div><br>
                     
                     <div class="modal-footer">
@@ -89,7 +92,7 @@
 
 
 
-  <table class="table">
+  <table class="table table-bordered">
   <thead class="thead-dark">
     <tr>
       <th scope="col">Nome</th>
@@ -109,7 +112,7 @@
             <td><?php echo $key['endereco']; ?></td>
             <td><?php echo $key['telefone']; ?></td>
             <td><?php echo $key['start']; ?></td>
-            <td><button type="button" class="btn btn-primary"  data-toggle="modal" data-target=".bd-example-modal-lg<?php echo $key['id']; ?>">viualizar</button></td>
+            <td><button type="button" class="btn btn-primary"  data-toggle="modal" data-target=".bd-example-modal-xl<?php echo $key['id']; ?>">viualizar</button></td>
         </tr>
         <?php endforeach;?>
     </tbody>
@@ -120,8 +123,10 @@
   </div>
 
   <script>
-    $('#formCadastrarEscola').submit(function(event){
-        $.post('Controller_escola/addEscola', $('#formCadastrarEscola').serialize(), function (resposta){
+  $('.formCadastrarEscola').each((index, element) => {
+    $(element).submit(function(event){
+        event.preventDefault();
+        $.post('Prontuario/salvar', $(element).serialize(), function (resposta){
             if(resposta === "true"){
                 $('#sucesso').html('Dados cadastrados com sucesso!');
                 $('#sucesso').attr('class', 'alert alert-success');
@@ -137,7 +142,9 @@
     $('#modalCadastrarEscola').on('hidden.bs.model', function(){
        $('#sucesso').attr('class', 'alert alert-success d-none');
     });
+  }) 
 </script>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
