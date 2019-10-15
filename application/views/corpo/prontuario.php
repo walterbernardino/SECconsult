@@ -12,6 +12,31 @@
   </head>
   <body>
 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+           
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Situação da consulta
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Confirmados</a>
+                            <a class="dropdown-item" href="#">A confirma</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Cancelados</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" action="" method="post">
+                    <input class="form-control mr-sm-2" type="search" name="busca" id="busca" placeholder="Pesquisar" aria-label="Pesquisar">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </nav>
+
 
 
 <?php foreach ($eventos as $key): ?>
@@ -70,6 +95,13 @@
                             <?php echo $key['start']; ?>
                         </div>
 
+                        <div class="col-12 col-sm-3 col-md-6">
+                            <!--<label>Data</label>
+                            <input type="text" name="esc_data" id="esc_data" class="form-control" required>-->
+                            <h5>Prontuario anteriores: </h5>
+                            <?php echo $key['prontuario']; ?>
+                        </div>
+
                     <div class="col-12 col-sm-12 col-md-12">
                         <div class="input-group-prepend">
                         <h5>Prontuario :</h5>
@@ -91,8 +123,10 @@
 <?php endforeach;?>
 
 
-
-  <table class="table table-bordered">
+<div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+  <table class="table table-bordered" >
   <thead class="thead-dark">
     <tr>
       <th scope="col">Nome</th>
@@ -117,8 +151,13 @@
         <?php endforeach;?>
     </tbody>
   </table>
+  </div>
+ </div>
+</div>
 
   <div class="album py-5 bg-light">
+
+  
 
   </div>
 
