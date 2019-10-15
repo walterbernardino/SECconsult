@@ -12,32 +12,6 @@
   </head>
   <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-           
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Situação da consulta
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Confirmados</a>
-                            <a class="dropdown-item" href="#">A confirma</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Cancelados</a>
-                        </div>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0" action="" method="post">
-                    <input class="form-control mr-sm-2" type="search" name="busca" id="busca" placeholder="Pesquisar" aria-label="Pesquisar">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-                </form>
-            </div>
-        </nav>
-
-
 
 <?php foreach ($eventos as $key): ?>
 <div class="modal fade bd-example-modal-xl<?php echo $key['id']; ?>" id="modalCadastrarEscola" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
@@ -126,7 +100,7 @@
 <div class="card shadow mb-4">
         <div class="card-body">
             <div class="table-responsive">
-  <table class="table table-bordered" >
+  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" >
   <thead class="thead-dark">
     <tr>
       <th scope="col">Nome</th>
