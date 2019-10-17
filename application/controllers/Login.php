@@ -23,10 +23,11 @@ class Login extends CI_Controller {
 		if (!empty($id)) {
 			$this->session->set_userdata('admin', $id);
 
-			redirect('Admin');
+			echo json_encode (array ('true' => 'false'));
+			
 			
 		} else {
-			$this->load->view('login-errado');
+			echo json_encode (array ('false' => 'false'));
 		}
 
 	}
