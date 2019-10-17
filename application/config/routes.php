@@ -58,3 +58,5 @@ $route['index-corpo'] = 'Admin';
 $route['agenda-cad'] = 'Controler_cad_agenda';
 
 $route['prontuario'] = 'Prontuario/index';
+
+$route['relatorio'] = 'Controler_relatorio';

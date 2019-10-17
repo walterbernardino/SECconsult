@@ -53,6 +53,8 @@
 
 <!-- Page level custom scripts -->
 <script src="<?php echo base_url('bootstrap/js/demo/datatables-demo.js'); ?>"></script>
+<script src="<?php echo base_url('bootstrap/js/demo/chart-pie-demo.js'); ?>"></script>
+
 </body>
 
 </html>

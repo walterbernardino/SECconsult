@@ -76,7 +76,7 @@
                 <hr class="sidebar-divider">
 
                 <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('agenda-cad'); ?>">
+                <a class="nav-link" href="<?php echo base_url('relatorio'); ?>">
                 <i class="fas fa-chart-pie"></i>
                         <span>Relatorio</span></a>
                 </li>
