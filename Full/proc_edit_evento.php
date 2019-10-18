@@ -27,7 +27,7 @@ if(!empty($id) && !empty($title) && !empty($cpf)  && !empty($endereco) && !empty
 	$data_sem_barra = implode("-", $data_sem_barra);
 	$end_sem_barra = $data_sem_barra . " " . $hora;
 	
-	$result_events = "UPDATE eventos SET title='$title', cpf='$cpf', endereco='$endereco', telefone='$telefone', color='$color', start='$start_sem_barra', end='$end_sem_barra' WHERE id='$id'"; 
+	$result_events = "UPDATE paciente SET title='$title', cpf='$cpf', endereco='$endereco', telefone='$telefone', color='$color', start='$start_sem_barra', end='$end_sem_barra' WHERE id='$id'"; 
 	$resultado_events = mysqli_query($conn, $result_events);
 	
 	//Verificar se alterou no banco de dados através "mysqli_affected_rows"

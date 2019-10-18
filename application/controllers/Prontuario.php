@@ -11,8 +11,9 @@ class Prontuario extends CI_Controller{
 
         
 
-        $this->load->model("Prontuario_model");
-        $lista = $this->Prontuario_model->buscar();
+        $this->load->model("Paciente_model");
+        $lista = $this->Paciente_model->buscar();
+    
         $dados = array('eventos' => $lista);
 
 
@@ -34,10 +35,22 @@ class Prontuario extends CI_Controller{
             'prontuario' => $this->input->post('prontuario')
         );
 
-        $r = $this->Prontuario_model->insert($dados['id'],$dados['prontuario']);
+        $r = $this->Prontuario_model->insertProtuario($dados['id'],$dados['prontuario']);
         echo Json_encode($r);
 
     }
+
+    public function getProtuario()
+    {
+        $id = $this->uri->segment(2);
+        $this->load->model('Prontuario_model');
+        $this->load->model('Paciente_model');
+        $dados['prontuario'] = $this->Prontuario_model->getProntuario($id);
+        $dados['paciente']  = $this->Paciente_model->get($id);
+       $this->load->view('corpo/paciente', $dados);
+    }
+
+    
 
 
 }

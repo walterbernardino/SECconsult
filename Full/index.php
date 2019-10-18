@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once("conexao.php");
-$result_events = "SELECT id, title, cpf, endereco, telefone, color, start, end FROM eventos";
+$result_events = "SELECT id, title, cpf, endereco, telefone, color, start, end FROM paciente";
 $resultado_events = mysqli_query($conn, $result_events);
 ?>
 <!DOCTYPE html>
@@ -244,15 +244,15 @@ $resultado_events = mysqli_query($conn, $result_events);
 					<div class="modal-body">
 						<form class="form-horizontal" method="POST" action="proc_cad_evento.php">
 						<div class="form-group">
-    							<label for="nome" class="col-sm-4 control-label">Nome do Paciente</label>
-    							<div class="col-sm-8">
+    							<label for="nome" class="col-sm-2 control-label">Nome</label>
+    							<div class="col-sm-10">
       							<input type="text" class="form-control" name="title" placeholder="Nome do Paciente">
     							</div>
   					</div>
 
 					  <div class="form-group">
-    							<label for="nome" class="col-sm-4 control-label">Cpf do Paciente</label>
-    							<div class="col-sm-8">
+    							<label for="nome" class="col-sm-2 control-label">CPF</label>
+    							<div class="col-sm-10">
       							<input type="text" class="form-control cpf" name="cpf" placeholder="cpf do Paciente">
     							</div>
   					</div>
@@ -265,15 +265,15 @@ $resultado_events = mysqli_query($conn, $result_events);
 					  </script>
 
   					<div class="form-group">
-    							<label for="nome" class="col-sm-4 control-label">Endereço do Paciente</label>
-    							<div class="col-sm-8">
+    							<label for="nome" class="col-sm-2 control-label">Endereço </label>
+    							<div class="col-sm-10">
       							<input type="text" class="form-control" name="endereco" placeholder="Endereço do Paciente">
     							</div>
   					</div>
 
   					<div class="form-group">
-    							<label for="nome" class="col-sm-4 control-label">Telefone do Paciente</label>
-    							<div class="col-sm-8">
+    							<label for="nome" class="col-sm-2 control-label">Telefone</label>
+    							<div class="col-sm-10">
       							<input type="text" class="form-control phone" name="telefone" placeholder="Telefone do Paciente">
     							</div>
   					</div>
@@ -289,7 +289,7 @@ $resultado_events = mysqli_query($conn, $result_events);
     							<div class="col-sm-8">
       							<select name="color" class="form-control" id="color">
 										<option value="">Selecione</option>			
-										<option style="color:#FFD700;" value="#FFD700">A confirma</option>
+										<option style="color:#FFD700;" value="#FFD700">A confirmar</option>
 										<option style="color:#0071c5;" value="#0071c5">Reagendado</option>	
 										<option style="color:#228B22;" value="#228B22">Confirmado</option>
 										<option style="color:#8B0000;" value="#8B0000">Cancelado</option>

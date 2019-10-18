@@ -73,7 +73,7 @@
                             <!--<label>Data</label>
                             <input type="text" name="esc_data" id="esc_data" class="form-control" required>-->
                             <h5>Prontuario anteriores: </h5>
-                            <?php echo $key['prontuario']; ?>
+                            <a href="<?=base_url('prontuario/').$key['id']?>">Ver prituarios</a>
                         </div>
 
                     <div class="col-12 col-sm-12 col-md-12">

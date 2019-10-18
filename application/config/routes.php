@@ -60,3 +60,5 @@ $route['agenda-cad'] = 'Controler_cad_agenda';
 $route['prontuario'] = 'Prontuario/index';
 
 $route['relatorio'] = 'Controler_relatorio';
+
+$route['prontuario/(:any)'] = 'Prontuario/getProtuario';

@@ -56,13 +56,13 @@
 
 				<div class="container-login100-form-btn">
 					<button class="login100-form-btn" type="submit">
-						Logar
+						Entrar
 					</button>
 				</div>
 
 				<br>
 				<div class="alert alert-danger alert-dismissible fade show show-login" role="alert">
-  				Login ou senha errada
+  				Login ou senha invalido
 				  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     			<span aria-hidden="true">&times;</span>
  				 </button>
