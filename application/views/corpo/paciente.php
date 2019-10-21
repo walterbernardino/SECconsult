@@ -27,7 +27,7 @@
 
 
 <!-- PROTUARIOS -->
-<h1>PROTUARIOS</h1>
+<h1>PRONTUARIOS</h1>
 
 <?php foreach ($prontuario as $key):?>
 <p><?=$key['prontuario']?></p>

@@ -69,11 +69,11 @@
                             <?php echo $key['start']; ?>
                         </div>
 
-                        <div class="col-12 col-sm-3 col-md-6">
+                        <div class="col-12 col-sm-3 col-md-6" >
                             <!--<label>Data</label>
                             <input type="text" name="esc_data" id="esc_data" class="form-control" required>-->
                             <h5>Prontuario anteriores: </h5>
-                            <a href="<?=base_url('prontuario/').$key['id']?>">Ver prituarios</a>
+                            <a href="<?=base_url('prontuario/').$key['id']?>" target="_blank">Ver prontuarios</a>
                         </div>
 
                     <div class="col-12 col-sm-12 col-md-12">
@@ -104,7 +104,7 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">Nome</th>
-      <th scope="col">Cpf</th>
+      <th scope="col">CPF</th>
       <th scope="col">Endereço</th>
       <th scope="col">Telefone</th>
       <th scope="col">Data da consulta</th>
@@ -120,7 +120,7 @@
             <td><?php echo $key['endereco']; ?></td>
             <td><?php echo $key['telefone']; ?></td>
             <td><?php echo $key['start']; ?></td>
-            <td><button type="button" class="btn btn-primary"  data-toggle="modal" data-target=".bd-example-modal-xl<?php echo $key['id']; ?>">viualizar</button></td>
+            <td><button type="button" class="btn btn-primary"  data-toggle="modal" data-target=".bd-example-modal-xl<?php echo $key['id']; ?>">visualizar</button></td>
         </tr>
         <?php endforeach;?>
     </tbody>

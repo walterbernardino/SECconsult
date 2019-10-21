@@ -55,11 +55,7 @@
                     <i class="fas fa-clinic-medical"></i>
                         <span>Resumo</span></a>
                 </li>
-                <!--<li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('Login/sair'); ?>">
-                    <i class="fas fa-clinic-medical"></i>
-                        <span>Sair</span></a>
-                </li>-->
+               
 
 
                 <?php if($tipo['tipo'] == 0):?>
@@ -80,6 +76,8 @@
                 <i class="fas fa-chart-pie"></i>
                         <span>Relatorio</span></a>
                 </li>
+
+                
                 <?php endif;?>
                 
                 <?php if($tipo['tipo'] != 0):?>
@@ -91,8 +89,16 @@
                         <span>Prontuario</span></a>
                 </li>
                 <?php endif;?>
+
+                
                 <!-- Divider -->
                 <hr class="sidebar-divider d-none d-md-block">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('Login/sair'); ?>">
+                    <i class="fas fa-sign-out-alt"></i>
+                        <span>Sair</span></a>
+                </li>
                 
 
                 <!-- Sidebar Toggler (Sidebar) -->

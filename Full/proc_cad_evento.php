@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-//Incluir conexao com BD
+// conexao BD
 include_once("conexao.php");
 
 $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
@@ -14,7 +14,7 @@ $end = filter_input(INPUT_POST, 'end', FILTER_SANITIZE_STRING);
 
 
 if(!empty($title)  && !empty($cpf) && !empty($endereco) && !empty($telefone) && !empty($color) && !empty($start) && !empty($end)){
-	//Converter a data e hora do formato brasileiro para o formato do Banco de Dados
+	//Converter a data e hora 
 	$data = explode(" ", $start);
 	list($date, $hora) = $data;
 	$data_sem_barra = array_reverse(explode("/", $date));
