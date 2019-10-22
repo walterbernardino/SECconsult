@@ -62,3 +62,7 @@ $route['prontuario'] = 'Prontuario/index';
 $route['relatorio'] = 'Controler_relatorio';
 
 $route['prontuario/(:any)'] = 'Prontuario/getProtuario';
+
+
+$route['gerar-relatorio/(:any)'] = 'Prontuario/gerarRelatorio';
+

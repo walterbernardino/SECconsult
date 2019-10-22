@@ -47,8 +47,27 @@ class Prontuario extends CI_Controller{
         $this->load->model('Paciente_model');
         $dados['prontuario'] = $this->Prontuario_model->getProntuario($id);
         $dados['paciente']  = $this->Paciente_model->get($id);
+        $dados['relatorio'] = true;
        $this->load->view('corpo/paciente', $dados);
     }
+
+    public function gerarRelatorio()
+	{
+        $id = $this->uri->segment(2);
+        $this->load->model('Prontuario_model');
+        $this->load->model('Paciente_model');
+        $dados['relatorio'] = false;
+        $dados['prontuario'] = $this->Prontuario_model->getProntuario($id);
+        $dados['paciente']  = $this->Paciente_model->get($id);
+      
+		$mpdf = new \Mpdf\Mpdf();
+
+		
+		$mpdf->WriteHTML($this->load->view('corpo/paciente', $dados, TRUE));
+		
+		
+		$mpdf->Output();
+	}
 
     
 

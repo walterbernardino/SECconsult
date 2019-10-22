@@ -11,4 +11,15 @@ class Controler_relatorio extends CI_Controller{
         $this->load->view('corpo/relatorio');
         $this->load->view('estrutura/rodapePage');
     }
+
+    public function gerarRelatorio()
+	{
+		$mpdf = new \Mpdf\Mpdf();
+
+		
+		$mpdf->WriteHTML('Hello World');
+		
+		
+		$mpdf->Output();
+	}
 }

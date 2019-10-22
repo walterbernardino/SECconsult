@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -83,6 +80,10 @@ session_start();
 	</head>
 	<body>
 		<div class="container">
+
+			<?php
+			session_start();
+			?>
 			
 			<?php
 			if(isset($_SESSION['msg'])){
@@ -125,9 +126,9 @@ session_start();
 						<div class="form">
 							<form class="form-horizontal" method="POST" action="proc_edit_evento.php">
 								<div class="form-group">
-									<label for="inputEmail3" class="col-sm-4 control-label">Nome do Paciente</label>
+									<label for="inputEmail3" class="col-sm-4 control-label" >Nome do Paciente</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control" name="title" id="title" placeholder="Nome do paciente">
+										<input type="text" class="form-control" name="title" readonly="true" id="title" placeholder="Nome do paciente">
 									</div>
 								</div>
 
@@ -139,9 +140,7 @@ session_start();
   								</div>
 
   								<script>
-						 
 						 		$('.cpf').mask('000.000.000-00', {reverse: true});
-
 								</script>
 
 								<div class="form-group">
