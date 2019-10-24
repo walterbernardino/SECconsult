@@ -144,13 +144,11 @@
 								<div class="form-group">
     							<label for="nome" class="col-sm-4 control-label">Cpf do Paciente</label>
     							<div class="col-sm-8">
-      							<input type="text" class="form-control" name="cpf" id="cpf-up" placeholder="Cpf do Paciente">
+      							<input type="text" class="form-control" name="cpf" id="cpf" placeholder="Cpf do Paciente">
     							</div>
   								</div>
 
-  								<script>
-						 		$('#cpf-up').mask('000.000.000-00', {reverse: true});
-								</script>
+  								
 
 								<div class="form-group">
     							<label for="nome" class="col-sm-4 control-label">Endereço do Paciente</label>
@@ -214,20 +212,20 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title text-center">Cadastrar Paciente</h4>
+						<!--<h4 class="modal-title text-center">Cadastrar Paciente</h4>-->
 					</div>
 					<div class="modal-body">
 						<form class="form-horizontal" method="POST" action="proc_cad_evento.php">
 						<div class="form-group">
-    							<label for="nome" class="col-sm-2 control-label">Nome</label>
-    							<div class="col-sm-10">
+    							<label for="nome" class="col-sm-4 control-label">Nome</label>
+    							<div class="col-sm-8">
       							<input type="text" class="form-control" name="title" placeholder="Nome do Paciente">
     							</div>
   					</div>
 
 					  <div class="form-group">
-    							<label for="nome" class="col-sm-2 control-label">CPF</label>
-    							<div class="col-sm-10">
+    							<label for="nome" class="col-sm-4 control-label">CPF</label>
+    							<div class="col-sm-8">
       							<input type="text" class="form-control cpf" name="cpf" placeholder="cpf do Paciente">
     							</div>
   					</div>
@@ -240,15 +238,15 @@
 					  </script>
 
   					<div class="form-group">
-    							<label for="nome" class="col-sm-2 control-label">Endereço </label>
-    							<div class="col-sm-10">
+    							<label for="nome" class="col-sm-4 control-label">Endereço </label>
+    							<div class="col-sm-8">
       							<input type="text" class="form-control" name="endereco" placeholder="Endereço do Paciente">
     							</div>
   					</div>
 
   					<div class="form-group">
-    							<label for="nome" class="col-sm-2 control-label">Telefone</label>
-    							<div class="col-sm-10">
+    							<label for="nome" class="col-sm-4 control-label">Telefone</label>
+    							<div class="col-sm-8">
       							<input type="text" class="form-control phone" name="telefone" placeholder="Telefone do Paciente">
     							</div>
   					</div>
