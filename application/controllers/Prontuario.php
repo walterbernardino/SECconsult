@@ -46,7 +46,7 @@ class Prontuario extends CI_Controller{
         $this->load->model('Prontuario_model');
         $this->load->model('Paciente_model');
         $dados['prontuario'] = $this->Prontuario_model->getProntuario($id);
-        $dados['paciente']  = $this->Paciente_model->get($id);
+        $dados['paciente']  = $this->getConfirmados->Paciente_model->get($id);
         $dados['relatorio'] = true;
        $this->load->view('corpo/paciente', $dados);
     }

@@ -1,16 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Document</title>
+</head>
+<body>
+    
+
+
 <!-- USARIOS -->
 <?php if($relatorio) {?>
 <a href="<?=site_url('gerar-relatorio/').$paciente['id']?>">gerar Relatorio</a>
 <?php }?>
-<table>
+
+
+<table class="table">
 
 <thead>
 
     <tr>
         <td>Nome</td>
-        <td>Endereco</td>
         <td>CPF</td>
-        <td>TELEFONE</td>
     </tr>
 
 </thead>
@@ -18,11 +31,8 @@
 <tbody>
     <tr>
         <td> <?=$paciente['title']?></td>
-        <td><?=$paciente['endereco']?></td>
+        
         <td><?=$paciente['cpf']?></td>
-        <td><?=$paciente['telefone']?></td>
-       
-   
     </tr>
 </tbody>
 </table>
@@ -35,3 +45,6 @@
 <p><?=$key['prontuario']?></p>
 <p><?=$key['creat_at']?></p>
 <?php endforeach;?>
+
+</body>
+</html>

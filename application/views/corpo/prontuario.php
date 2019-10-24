@@ -25,7 +25,7 @@
             </div>
             <div class="modal-body">
                 <div class="alert alert-success d-none" id="sucesso" role="alert">
-                   Pronruario Cadastrado com sucesso!
+                   Prontuario Cadastrado com sucesso!
                 </div>
                 <form method="POST" class="formCadastrarEscola">
                     <div class=" form-row">

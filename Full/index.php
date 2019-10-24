@@ -27,7 +27,16 @@
 		<script>
 
 			$(document).ready(function() {
+				
 				$('#calendar').fullCalendar({
+					defaultView: 'month',
+					validRange: function(){
+						var dt = new Date()
+						return{
+							start: dt.getFullYear()+'-'+dt.getMonth()+'-'+dt.getDay()
+						};
+						console.log(dt)
+					},
 					header: {
 						left: 'prev,next today',
 						center: 'title',
@@ -100,7 +109,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title text-center">Dados do Paciente</h4>
+						<!--<h4 class="modal-title text-center">Dados do Paciente</h4>-->
 					</div>
 					<div class="modal-body">
 						<div class="visualizar">
@@ -135,12 +144,12 @@
 								<div class="form-group">
     							<label for="nome" class="col-sm-4 control-label">Cpf do Paciente</label>
     							<div class="col-sm-8">
-      							<input type="text" class="form-control" name="cpf" id="cpf" placeholder="Cpf do Paciente">
+      							<input type="text" class="form-control" name="cpf" id="cpf-up" placeholder="Cpf do Paciente">
     							</div>
   								</div>
 
   								<script>
-						 		$('.cpf').mask('000.000.000-00', {reverse: true});
+						 		$('#cpf-up').mask('000.000.000-00', {reverse: true});
 								</script>
 
 								<div class="form-group">
@@ -156,6 +165,8 @@
       							<input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone do Paciente">
     							</div>
   								</div>
+
+								  
 
 								<div class="form-group">
     							<label for="nome" class="col-sm-4 control-label">Situação da consulta</label>
