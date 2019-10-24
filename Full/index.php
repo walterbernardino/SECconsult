@@ -104,8 +104,8 @@
 			<div id='calendar'></div>
 		</div>
 
-		<div class="modal fade" id="visualizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-backdrop="static">
-			<div class="modal-dialog" role="document">
+		<div class="modal fade bd-example-modal-lg" id="visualizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-backdrop="static">
+			<div class="modal-dialog modal-lg" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -135,15 +135,15 @@
 						<div class="form">
 							<form class="form-horizontal" method="POST" action="proc_edit_evento.php">
 								<div class="form-group">
-									<label for="inputEmail3" class="col-sm-4 control-label" >Nome do Paciente</label>
-									<div class="col-sm-8">
+									<label for="inputEmail3" class="col-sm-3 control-label" >Nome do Paciente</label>
+									<div class="col-sm-9">
 										<input type="text" class="form-control" name="title" readonly="true" id="title" placeholder="Nome do paciente">
 									</div>
 								</div>
 
 								<div class="form-group">
-    							<label for="nome" class="col-sm-4 control-label">Cpf do Paciente</label>
-    							<div class="col-sm-8">
+    							<label for="nome" class="col-sm-3 control-label">Cpf do Paciente</label>
+    							<div class="col-sm-9">
       							<input type="text" class="form-control" name="cpf" id="cpf" placeholder="Cpf do Paciente">
     							</div>
   								</div>
@@ -151,15 +151,15 @@
   								
 
 								<div class="form-group">
-    							<label for="nome" class="col-sm-4 control-label">Endereço do Paciente</label>
-    							<div class="col-sm-8">
+    							<label for="nome" class="col-sm-3 control-label">Endereço do Paciente</label>
+    							<div class="col-sm-9">
       							<input type="text" class="form-control" name="endereco" id="endereco" placeholder="Endereço do Paciente">
     							</div>
   								</div>
 
   								<div class="form-group">
-    							<label for="nome" class="col-sm-4 control-label">Telefone do Paciente</label>
-    							<div class="col-sm-8">
+    							<label for="nome" class="col-sm-3 control-label">Telefone do Paciente</label>
+    							<div class="col-sm-9">
       							<input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone do Paciente">
     							</div>
   								</div>
@@ -167,8 +167,8 @@
 								  
 
 								<div class="form-group">
-    							<label for="nome" class="col-sm-4 control-label">Situação da consulta</label>
-    							<div class="col-sm-8">
+    							<label for="nome" class="col-sm-3 control-label">Situação da consulta</label>
+    							<div class="col-sm-9">
       							<select name="color" class="form-control" id="color">
 										<option value="">Selecione</option>			
 										<option style="color:#FFD700;" value="#FFD700">A confirma</option>
@@ -180,15 +180,15 @@
   								</div>
 
 								<div class="form-group">
-									<label for="inputEmail3" class="col-sm-4 control-label">Data da consulta</label>
-									<div class="col-sm-8">
+									<label for="inputEmail3" class="col-sm-3 control-label">Data da consulta</label>
+									<div class="col-sm-9">
 										<input type="text" class="form-control" name="start" id="start" onKeyPress="DataHora(event, this)">
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="inputEmail3" class="col-sm-4 control-label">Fim da consulta</label>
-									<div class="col-sm-8">
+									<label for="inputEmail3" class="col-sm-3 control-label">Fim da consulta</label>
+									<div class="col-sm-9">
 										<input type="text" class="form-control" name="end" id="end" onKeyPress="DataHora(event, this)">
 									</div>
 								</div>
@@ -207,8 +207,8 @@
 			</div>
 		</div>
 		
-		<div class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-backdrop="static">
-			<div class="modal-dialog" role="document">
+		<div class="modal fade bd-example-modal-lg" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-backdrop="static">
+			<div class="modal-dialog modal-lg" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -217,16 +217,16 @@
 					<div class="modal-body">
 						<form class="form-horizontal" method="POST" action="proc_cad_evento.php">
 						<div class="form-group">
-    							<label for="nome" class="col-sm-4 control-label">Nome</label>
-    							<div class="col-sm-8">
+    							<label for="nome" class="col-sm-3 control-label">Nome Do Paciente</label>
+    							<div class="col-sm-9">
       							<input type="text" class="form-control" name="title" placeholder="Nome do Paciente">
     							</div>
   					</div>
 
 					  <div class="form-group">
-    							<label for="nome" class="col-sm-4 control-label">CPF</label>
-    							<div class="col-sm-8">
-      							<input type="text" class="form-control cpf" name="cpf" placeholder="cpf do Paciente">
+    							<label for="nome" class="col-sm-3 control-label">CPF Do Paciente</label>
+    							<div class="col-sm-9">
+      							<input type="text" class="form-control cpf" name="cpf" placeholder="000.000.000-00">
     							</div>
   					</div>
 
@@ -238,16 +238,16 @@
 					  </script>
 
   					<div class="form-group">
-    							<label for="nome" class="col-sm-4 control-label">Endereço </label>
-    							<div class="col-sm-8">
+    							<label for="nome" class="col-sm-3 control-label">Endereço Do Paciente </label>
+    							<div class="col-sm-9">
       							<input type="text" class="form-control" name="endereco" placeholder="Endereço do Paciente">
     							</div>
   					</div>
 
   					<div class="form-group">
-    							<label for="nome" class="col-sm-4 control-label">Telefone</label>
-    							<div class="col-sm-8">
-      							<input type="text" class="form-control phone" name="telefone" placeholder="Telefone do Paciente">
+    							<label for="nome" class="col-sm-3 control-label">Telefone Do Paciente</label>
+    							<div class="col-sm-9">
+      							<input type="text" class="form-control phone" name="telefone" placeholder="(00)00000-0000">
     							</div>
   					</div>
 
@@ -258,8 +258,8 @@
 					 </script>
 
   					<div class="form-group">
-    							<label for="nome" class="col-sm-4 control-label">Situação da consulta</label>
-    							<div class="col-sm-8">
+    							<label for="nome" class="col-sm-3 control-label">Situação da consulta</label>
+    							<div class="col-sm-9">
       							<select name="color" class="form-control" id="color">
 										<option value="">Selecione</option>			
 										<option style="color:#FFD700;" value="#FFD700">A confirmar</option>
@@ -271,14 +271,14 @@
   					</div>
 
   					<div class="form-group">
-    							<label for="nome" class="col-sm-4 control-label">Inicio da consulta</label>
-    							<div class="col-sm-8">
+    							<label for="nome" class="col-sm-3 control-label">Inicio da consulta</label>
+    							<div class="col-sm-9">
       							<input type="text" class="form-control" name="start" id="start" onkeypress="DataHora(event,this)">
     							</div>
   					</div>
   					<div class="form-group">
-    							<label for="nome" class="col-sm-4 control-label">Fim da consulta</label>
-    							<div class="col-sm-8">
+    							<label for="nome" class="col-sm-3 control-label">Fim da consulta</label>
+    							<div class="col-sm-9">
       							<input type="text" class="form-control" name="end" id="end" onkeypress="DataHora(event,this)">
     							</div>
   					</div>

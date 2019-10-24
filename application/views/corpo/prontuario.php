@@ -63,8 +63,8 @@
                         </div>
 
                         <div class="col-12 col-sm-3 col-md-6">
-                            <!--<label>Data</label>
-                            <input type="text" name="esc_data" id="esc_data" class="form-control" required>-->
+                            <!--<label>Data</label>-->
+                            <!--<input type="date" name="esc_data" id="esc_data" class="form-control" required>-->
                             <h5>Data da consulta :</h5>
                             <?php echo $key['start']; ?>
                         </div>
@@ -129,11 +129,7 @@
  </div>
 </div>
 
-  <div class="album py-5 bg-light">
-
-  
-
-  </div>
+ 
 
   <script>
   $('.formCadastrarEscola').each((index, element) => {
