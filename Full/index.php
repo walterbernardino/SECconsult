@@ -29,14 +29,6 @@
 			$(document).ready(function() {
 				
 				$('#calendar').fullCalendar({
-					defaultView: 'month',
-					validRange: function(){
-						var dt = new Date()
-						return{
-							start: dt.getFullYear()+'-'+dt.getMonth()+'-'+dt.getDay()
-						};
-						console.log(dt)
-					},
 					header: {
 						left: 'prev,next today',
 						center: 'title',
@@ -109,7 +101,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<!--<h4 class="modal-title text-center">Dados do Paciente</h4>-->
+						
 					</div>
 					<div class="modal-body">
 						<div class="visualizar">
@@ -137,7 +129,7 @@
 								<div class="form-group">
 									<label for="inputEmail3" class="col-sm-3 control-label" >Nome do Paciente</label>
 									<div class="col-sm-9">
-										<input type="text" class="form-control" name="title" readonly="true" id="title" placeholder="Nome do paciente">
+										<input type="text" class="form-control" name="title"  id="title" placeholder="Nome do paciente">
 									</div>
 								</div>
 
@@ -212,7 +204,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<!--<h4 class="modal-title text-center">Cadastrar Paciente</h4>-->
+						
 					</div>
 					<div class="modal-body">
 						<form class="form-horizontal" method="POST" action="proc_cad_evento.php">

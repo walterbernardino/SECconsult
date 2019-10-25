@@ -80,7 +80,7 @@
                         <div class="input-group-prepend">
                         <h5>Prontuario :</h5>
                         </div>
-                        <textarea name="prontuario" id="prontuario" class="form-control" aria-label="With textarea" rows="8" cols="50"></textarea>
+                        <textarea name="prontuario" id="prontuario" required="" class="form-control" aria-label="With textarea" rows="8" cols="50"></textarea>
                     </div>
 
                     </div><br>
