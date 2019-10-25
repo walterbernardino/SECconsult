@@ -27,6 +27,30 @@ class Prontuario extends CI_Controller{
             
     }
 
+    public function resumoMedico(){
+        $this->load->model("pessoa_model");
+        $dt['tipo'] = $this->pessoa_model->getTipo();
+        $dt2 = $this->pessoa_model->getTipo();
+        if ($dt2['tipo'] == 1) {
+
+        
+
+        $this->load->model("Paciente_model");
+        $lista = $this->Paciente_model->buscar();
+    
+        $dados = array('eventos' => $lista);
+
+
+
+        $this->load->view('estrutura/cabPage',$dt);
+        $this->load->view('corpo/index_corpo',$dados);
+        $this->load->view('estrutura/rodapePage');
+        } else {
+            echo "Acesso não permitido";
+        }
+            
+    }
+
     public function salvar(){
         
         $this->load->model('Prontuario_model');

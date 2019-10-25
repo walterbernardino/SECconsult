@@ -16,7 +16,7 @@ class Admin extends CI_Controller {
         $this->load->view('corpo/index_corpo');
         $this->load->view('estrutura/rodapePage');
         } else {
-           redirect('./Prontuario/index');
+           redirect('./Prontuario/resumoMedico');
         }
 
     }
