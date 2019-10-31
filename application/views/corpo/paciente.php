@@ -5,18 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
+    
     <title>Relatorio</title>
 </head>
 <body>
     
-
-
-<!-- USARIOS -->
-<?php if($relatorio) {?>
-<a href="<?=site_url('gerar-relatorio/').$paciente['id']?>">gerar Relatorio</a>
-<?php }?>
-
-
 <table class="table">
 
 <thead>
@@ -31,7 +24,7 @@
 <tbody>
     <tr>
         <td> <?=$paciente['title']?></td>
-        
+        <br>
         <td><?=$paciente['cpf']?></td>
     </tr>
 </tbody>
@@ -45,6 +38,11 @@
 <p><?=$key['prontuario']?></p>
 <p><?=$key['creat_at']?></p>
 <?php endforeach;?>
+
+
+<?php if($relatorio) {?>
+<a href="<?=site_url('gerar-relatorio/').$paciente['id']?>">gerar Relatorio</a>
+<?php }?>
 
 </body>
 </html>

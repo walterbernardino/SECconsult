@@ -24,7 +24,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="alert alert-success d-none" id="sucesso" role="alert">
+                <div class="alert alert-success d-none s" id="sucesso" role="alert">
                    Prontuario Cadastrado com sucesso!
                 </div>
                 <form method="POST" class="formCadastrarEscola">
@@ -75,7 +75,7 @@
                             <h5>Prontuario anteriores: </h5>
                             <a href="<?=base_url('prontuario/').$key['id']?>" target="_blank">Ver prontuarios</a>
                         </div>
-
+                    
                     <div class="col-12 col-sm-12 col-md-12">
                         <div class="input-group-prepend">
                         <h5>Prontuario :</h5>
@@ -136,9 +136,22 @@
     $(element).submit(function(event){
         event.preventDefault();
         $.post('Prontuario/salvar', $(element).serialize(), function (resposta){
-            if(resposta === "true"){
-                $('#sucesso').html('Dados cadastrados com sucesso!');
-                $('#sucesso').attr('class', 'alert alert-success');
+            if(resposta == "true"){
+               
+                $('.s').each((index, element) => {
+                    $(element).attr('class', 'alert alert-success');
+                });
+
+                setTimeout(() => {
+                    window.location.href = window.location.href
+                }, 100);
+                // $('.s').each((index, element) => {
+                   
+                    
+                    // $(e).html('Dados cadastrados com sucesso!');
+                    // $(e).attr('class', 'alert alert-success');
+                // })
+               
             } else {
                 $('#sucesso').html('Erro ao salvar os dados 1');
                 $('#sucesso').attr('class', 'alert alert-danger');

@@ -29,6 +29,13 @@
 			$(document).ready(function() {
 				
 				$('#calendar').fullCalendar({
+					defaultView: 'month',
+  					validRange: function(nowDate) {
+   					 return {
+     				 start: nowDate,
+     				 end: nowDate.clone().add(24, 'months')
+   					 };
+ 					 },
 					header: {
 						left: 'prev,next today',
 						center: 'title',
@@ -121,7 +128,7 @@
 							<dt>Fim da Consulta</dt>
 							<dd id="end"></dd>
 						</dl>
-							<button class="btn btn-canc-vis btn-warning">Editar</button>
+							<!--<button class="btn btn-canc-vis btn-warning">Editar</button>-->
 						</div>
 						
 						<div class="form">
