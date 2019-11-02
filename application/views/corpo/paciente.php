@@ -6,23 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
     <style>
-   
-    body {
-        background: red;
+
+    img{
+         max-width: 20%;
+         position: right top;
     }
+    
+
+.topright {
+  position: absolute;
+  top: 35px;
+  right: 30px;
+  
+}
          
     </style>
     <title>Relatorio</title>
 </head>
 <body>
+    <img src="<?php echo base_url(); ?>public/images/sc.jpg">
+    <div align="right" class="topright">
+       Rua coronel luis aires <br>
+       Jardim-CE CEP:63290-000<br>
+       Telefone(00)00000-0000<br>
+       Dr nome sobrenome.
+    </div>
+    <hr></hr>
+    <p>Nome:<?=$paciente['title']?> </p>
+    <p>CPF: <?=$paciente['cpf']?></p>
     
-<table class="table">
+<!--<table class="table">
 
 <thead>
 
     <tr>
-        <td>Nome</td>
-        <td>CPF</td>
+        <td>Nome :</td>
+        <td>CPF :</td>
     </tr>
 
 </thead>
@@ -34,7 +53,7 @@
         <td><?=$paciente['cpf']?></td>
     </tr>
 </tbody>
-</table>
+</table>-->
 
 
 <!-- PROTUARIOS -->
@@ -43,6 +62,7 @@
 <?php foreach ($prontuario as $key):?>
 <p><?=$key['prontuario']?></p>
 <p><?=$key['creat_at']?></p>
+<hr>
 <?php endforeach;?>
 
 
