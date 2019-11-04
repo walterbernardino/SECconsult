@@ -1,6 +1,11 @@
 <?php
 
 class Controler_relatorio extends CI_Controller{
+
+    public function __construct() {
+        Parent::__construct();
+        $this->verificarLogin();
+    }
     public function index(){
 
 
@@ -17,8 +22,7 @@ class Controler_relatorio extends CI_Controller{
         $this->load->view('estrutura/rodapePage');
     }
 
-    public function gerarRelatorio()
-	{
+    public function gerarRelatorio(){
 		$mpdf = new \Mpdf\Mpdf();
 
 		
@@ -29,9 +33,8 @@ class Controler_relatorio extends CI_Controller{
     }
     
     private function verificarLogin(){
-        if(empty($this->session->admin)){
+        if(!empty($this->session->admin)){
             redirect('login');
-
         }
 
 

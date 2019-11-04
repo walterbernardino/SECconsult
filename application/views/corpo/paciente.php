@@ -44,7 +44,7 @@ b{
        Telefone(00)00000-0000<br>
        Dr nome sobrenome.
     </div>
-    <hr></hr>
+    <hr>
     <p>Nome:<?=$paciente['title']?> </p>
     <p>CPF: <?=$paciente['cpf']?></p>
 
@@ -57,9 +57,11 @@ b{
 <p><?=$key['creat_at']?></p>
 <hr>
 <?php endforeach;?>
-  <br><br><br><br><br>
 
-  <hr class="teste"><p align="center">Assinatura do medico:</p>
+<br><br><br><br><br>
+
+<hr class="teste"><p align="center">Assinatura</p>
+
 
 <?php if($relatorio) {?>
 <a href="<?=site_url('gerar-relatorio/').$paciente['id']?>">gerar Relatorio</a>

@@ -33,8 +33,7 @@ class Login extends CI_Controller {
 
 	}
 
-	public function sair()
-	{
+	public function sair(){
 		unset($this->session->admin);
 		redirect('login');
 	}

@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
+    public function __construct() {
+        Parent::__construct();
+        $this->verificarLogin();
+    }
+
     public function index(){
         
         $this->verificarLogin();
@@ -23,7 +28,7 @@ class Admin extends CI_Controller {
     }
 
     private function verificarLogin(){
-        if(empty($this->session->admin)){
+        if(!empty($this->session->admin)){
             redirect('login');
         }
     }

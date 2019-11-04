@@ -1,6 +1,10 @@
 <?php
 
 class Controler_cad_agenda extends CI_Controller{
+    public function __construct() {
+        Parent::__construct();
+        $this->verificarLogin();
+    }
     public function index(){
 
         $this->verificarLogin();
@@ -16,7 +20,7 @@ class Controler_cad_agenda extends CI_Controller{
     }
 
     private function verificarLogin(){
-        if(empty($this->session->admin)){
+        if(!empty($this->session->admin)){
             redirect('login');
 
         }

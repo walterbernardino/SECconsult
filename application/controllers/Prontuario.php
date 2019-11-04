@@ -2,6 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Prontuario extends CI_Controller{
+    public function __construct() {
+        Parent::__construct();
+        $this->verificarLogin();
+    }
     public function index(){
         $this->verificarLogin();
         $this->load->model("pessoa_model");
@@ -64,8 +68,7 @@ class Prontuario extends CI_Controller{
 
     }
 
-    public function getProtuario()
-    {
+    public function getProtuario(){
         $id = $this->uri->segment(2);
         $this->load->model('Prontuario_model');
         $this->load->model('Paciente_model');
@@ -75,8 +78,7 @@ class Prontuario extends CI_Controller{
        $this->load->view('corpo/paciente', $dados);
     }
 
-    public function gerarRelatorio()
-	{
+    public function gerarRelatorio(){
         $id = $this->uri->segment(2);
         $this->load->model('Prontuario_model');
         $this->load->model('Paciente_model');
@@ -95,9 +97,8 @@ class Prontuario extends CI_Controller{
 
     
     private function verificarLogin(){
-        if(empty($this->session->admin)){
+        if(!empty($this->session->admin)){
             redirect('login');
-
         }
 
 
