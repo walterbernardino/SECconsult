@@ -86,11 +86,10 @@
 	<body>
 		<div class="container">
 
-			<?php
-			session_start();
-			?>
+			
 			
 			<?php
+			session_start();
 			if(isset($_SESSION['msg'])){
 				echo $_SESSION['msg'];
 				unset($_SESSION['msg']);

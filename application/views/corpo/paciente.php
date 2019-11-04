@@ -19,6 +19,19 @@
   right: 30px;
   
 }
+h1{
+  color: #479b9b;
+}
+hr.teste{
+  width: 500px;
+  color: black;
+  height: 2px;
+}
+b{
+  color: green;
+  text-align: center;
+
+}
          
     </style>
     <title>Relatorio</title>
@@ -37,14 +50,16 @@
 
 
 <!-- PROTUARIOS -->
-<h1>PRONTUARIOS</h1>
+<h1>PRONTUÁRIOS</h1>
 
 <?php foreach ($prontuario as $key):?>
 <p><?=$key['prontuario']?></p>
 <p><?=$key['creat_at']?></p>
 <hr>
 <?php endforeach;?>
+  <br><br><br><br><br>
 
+  <hr class="teste"><p align="center">Assinatura do medico:</p>
 
 <?php if($relatorio) {?>
 <a href="<?=site_url('gerar-relatorio/').$paciente['id']?>">gerar Relatorio</a>
