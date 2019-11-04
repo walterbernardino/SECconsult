@@ -5,6 +5,7 @@ class Admin extends CI_Controller {
 
     public function index(){
         
+        $this->verificarLogin();
         $this->load->model("pessoa_model");
 
         $dt['tipo'] = $this->pessoa_model->getTipo();
@@ -19,6 +20,12 @@ class Admin extends CI_Controller {
            redirect('./Prontuario/resumoMedico');
         }
 
+    }
+
+    private function verificarLogin(){
+        if(empty($this->session->admin)){
+            redirect('login');
+        }
     }
 
 

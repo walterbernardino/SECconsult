@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Prontuario extends CI_Controller{
     public function index(){
-        
+        $this->verificarLogin();
         $this->load->model("pessoa_model");
         $dt['tipo'] = $this->pessoa_model->getTipo();
         $dt2 = $this->pessoa_model->getTipo();
@@ -94,6 +94,13 @@ class Prontuario extends CI_Controller{
 	}
 
     
+    private function verificarLogin(){
+        if(empty($this->session->admin)){
+            redirect('login');
 
+        }
+
+
+    }
 
 }

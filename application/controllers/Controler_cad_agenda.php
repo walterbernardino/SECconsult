@@ -3,6 +3,7 @@
 class Controler_cad_agenda extends CI_Controller{
     public function index(){
 
+        $this->verificarLogin();
         $this->load->model("pessoa_model");
         $this->load->model('Paciente_model');
         $dt['tipo'] = $this->pessoa_model->getTipo();
@@ -12,5 +13,14 @@ class Controler_cad_agenda extends CI_Controller{
         $this->load->view('corpo/agenda_cad', $agenda);
         $this->load->view('estrutura/rodapePage');
      
+    }
+
+    private function verificarLogin(){
+        if(empty($this->session->admin)){
+            redirect('login');
+
+        }
+
+
     }
 }

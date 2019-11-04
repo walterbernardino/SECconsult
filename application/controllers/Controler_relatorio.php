@@ -3,6 +3,8 @@
 class Controler_relatorio extends CI_Controller{
     public function index(){
 
+
+        $this->verificarLogin();
         $this->load->model("pessoa_model");
         $this->load->model('Paciente_model');
         $dt['tipo'] = $this->pessoa_model->getTipo();
@@ -24,5 +26,14 @@ class Controler_relatorio extends CI_Controller{
 		
 		
 		$mpdf->Output();
-	}
+    }
+    
+    private function verificarLogin(){
+        if(empty($this->session->admin)){
+            redirect('login');
+
+        }
+
+
+    }
 }
