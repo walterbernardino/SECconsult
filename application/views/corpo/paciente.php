@@ -34,26 +34,6 @@
     <hr></hr>
     <p>Nome:<?=$paciente['title']?> </p>
     <p>CPF: <?=$paciente['cpf']?></p>
-    
-<!--<table class="table">
-
-<thead>
-
-    <tr>
-        <td>Nome :</td>
-        <td>CPF :</td>
-    </tr>
-
-</thead>
-
-<tbody>
-    <tr>
-        <td> <?=$paciente['title']?></td>
-        <br>
-        <td><?=$paciente['cpf']?></td>
-    </tr>
-</tbody>
-</table>-->
 
 
 <!-- PROTUARIOS -->

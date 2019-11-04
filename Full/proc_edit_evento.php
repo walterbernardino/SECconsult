@@ -93,23 +93,23 @@ if(!empty($id) && !empty($title) && !empty($cpf)  && !empty($endereco) && !empty
 	//Verificar se alterou no banco de dados através "mysqli_affected_rows"
 	if(mysqli_affected_rows($conn)){
 		$_SESSION['msg'] = "<div class='alert alert-success' role='alert'>Dados do Paciente Atualizado com Sucesso<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
-		header("Location: index.php");
+		header("Location: resumo.php");
 	}else{
 		$_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Erro ao editar os dados do Paciente <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
-		header("Location: index.php");
+		header("Location: resumo.php");
 	}
 
 }else{
 	$_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>CPF Invalido  <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
-	header("Location: index.php");
+	header("Location: resumo.php");
 }
 
 }else{
 	$_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Nome Invalido  <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
-	header("Location: index.php");
+	header("Location: resumo.php");
 }
 }else{
 		$_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Erro ao editar os dados do Paciente <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
 		
-	header("Location: index.php");
+	header("Location: resumo.php");
 }
