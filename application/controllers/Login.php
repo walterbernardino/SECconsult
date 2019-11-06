@@ -3,8 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
-	public function index()
-	{
+	public function index(){
 		$this->load->view('login');
 		
 		$this->load->model("pessoa_model");
@@ -20,7 +19,7 @@ class Login extends CI_Controller {
 
 		$id = $this->Pessoa_model->login($email, $senha);
 	
-
+	
 		if (!empty($id)) {
 			$this->session->set_userdata('admin', $id);
 

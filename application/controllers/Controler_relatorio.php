@@ -23,17 +23,17 @@ class Controler_relatorio extends CI_Controller{
     }
 
     public function gerarRelatorio(){
-		$mpdf = new \Mpdf\Mpdf();
+        $mpdf = new \Mpdf\Mpdf();
 
-		
-		$mpdf->WriteHTML('Hello World');
-		
-		
-		$mpdf->Output();
+        
+        $mpdf->WriteHTML('Hello World');
+        
+        
+        $mpdf->Output();
     }
     
     private function verificarLogin(){
-        if(!empty($this->session->admin)){
+        if(empty($this->session->admin)){
             redirect('login');
         }
 

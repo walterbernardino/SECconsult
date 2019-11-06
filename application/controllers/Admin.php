@@ -28,7 +28,7 @@ class Admin extends CI_Controller {
     }
 
     private function verificarLogin(){
-        if(!empty($this->session->admin)){
+        if(empty($this->session->admin)){
             redirect('login');
         }
     }

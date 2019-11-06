@@ -2,25 +2,19 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Prontuario extends CI_Controller{
-    public function __construct() {
-        Parent::__construct();
-        $this->verificarLogin();
-    }
+
     public function index(){
-        $this->verificarLogin();
+       
         $this->load->model("pessoa_model");
         $dt['tipo'] = $this->pessoa_model->getTipo();
         $dt2 = $this->pessoa_model->getTipo();
-        if ($dt2['tipo'] == 1) {
-
         
+        if ($dt2['tipo'] == 1) {
 
         $this->load->model("Paciente_model");
         $lista = $this->Paciente_model->buscar();
     
         $dados = array('eventos' => $lista);
-
-
 
         $this->load->view('estrutura/cabPage',$dt);
         $this->load->view('corpo/prontuario',$dados);
@@ -37,14 +31,10 @@ class Prontuario extends CI_Controller{
         $dt2 = $this->pessoa_model->getTipo();
         if ($dt2['tipo'] == 1) {
 
-        
-
         $this->load->model("Paciente_model");
         $lista = $this->Paciente_model->buscar();
     
         $dados = array('eventos' => $lista);
-
-
 
         $this->load->view('estrutura/cabPage',$dt);
         $this->load->view('corpo/index_corpo',$dados);
@@ -94,14 +84,5 @@ class Prontuario extends CI_Controller{
 		
 		$mpdf->Output();
 	}
-
-    
-    private function verificarLogin(){
-        if(!empty($this->session->admin)){
-            redirect('login');
-        }
-
-
-    }
 
 }
