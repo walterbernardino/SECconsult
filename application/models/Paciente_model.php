@@ -2,6 +2,7 @@
 
 
 class Paciente_model extends CI_Model {
+    
     public function salvar($dados){
         $this->db->insert('paciente',$dados);
         return $this->db->insert_id();

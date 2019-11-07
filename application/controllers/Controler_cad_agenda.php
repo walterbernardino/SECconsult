@@ -25,7 +25,5 @@ class Controler_cad_agenda extends CI_Controller{
             redirect('login');
 
         }
-
-
     }
 }

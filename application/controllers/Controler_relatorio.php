@@ -22,15 +22,11 @@ class Controler_relatorio extends CI_Controller{
         $this->load->view('estrutura/rodapePage');
     }
 
-    public function gerarRelatorio(){
-        $mpdf = new \Mpdf\Mpdf();
-
-        
-        $mpdf->WriteHTML('Hello World');
-        
-        
-        $mpdf->Output();
-    }
+    //public function gerarRelatorio(){
+        //$mpdf = new \Mpdf\Mpdf();
+        //$mpdf->WriteHTML('Hello World');
+        //$mpdf->Output();
+    //}
     
     private function verificarLogin(){
         if(empty($this->session->admin)){

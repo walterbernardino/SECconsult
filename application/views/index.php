@@ -7,6 +7,7 @@
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<meta name="description" content="">
 		<meta name="author" content="">
+		<link rel="icon" type="image/png" href="<?php echo base_url(); ?>login/images/icons/sec.ico"/>
 		<link rel="icon" href="<?php echo base_url(); ?>public/favicon.ico">
 		<title>SEconsult</title>
 		<!-- Bootstrap core CSS -->
@@ -37,7 +38,9 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand page-scroll" href="#page-top"><img src="<?php echo base_url(); ?>public/images/logo.png" alt="Lattes theme logo"></a>
+					<a class="navbar-brand page-scroll" href="#page-top">
+						<img width="200" height="100" src="<?php echo base_url(); ?>public/images/SEC.png"  alt="Lattes theme logo">
+					</a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -61,7 +64,7 @@
 							<a class="page-scroll" href="#contact">Contato</a>
 						</li>
 						<li>
-							<a target="_blank" href="http://seconsult.com.br/">Login</a>
+							<a target="_blank" href="<?php echo site_url('login'); ?>">Login</a>
 						</li>
 					</ul>
 				</div>
@@ -140,7 +143,7 @@
 			</div>
 			<!-- /.container -->
 		</section>
-		<section >
+		<!--<section >
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
@@ -151,7 +154,7 @@
 					</div>
 					<div class="col-md-6">
 						<!-- skill bar item -->
-						<div class="skillbar-item">
+						<!--<div class="skillbar-item">
 							<div class="skillbar-score">
 								<span class="score">90</span><span class="percent">%</span>
 							</div>
@@ -163,7 +166,7 @@
 								</div>
 							</div>
 						</div>
-						<!-- skill bar item -->
+						<!-- skill bar item 
 						<div class="skillbar-item">
 							<div class="skillbar-score">
 								<span class="score">80</span><span class="percent">%</span>
@@ -175,8 +178,8 @@
 									</div>
 								</div>
 							</div>
-						</div>
-						<!-- skill bar item -->
+						</div>-->
+						<!-- skill bar item 
 						<div class="skillbar-item">
 							<div class="skillbar-score">
 								<span class="score">85</span><span class="percent">%</span>
@@ -188,9 +191,9 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div>-->
 						<!-- skill bar item -->
-						<div class="skillbar-item">
+						<!--<div class="skillbar-item">
 							<div class="skillbar-score">
 								<span class="score">70</span><span class="percent">%</span>
 							</div>
@@ -205,8 +208,8 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<section class="overlay-dark bg-img1 dark-bg short-section">
+		</section>-->
+		<!--<section class="overlay-dark bg-img1 dark-bg short-section">
 			<div class="container text-center">
 				<div class="row">
 					<div class="col-md-3 mb-sm-30">
@@ -235,7 +238,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>-->
 		<section id="portfolio" class="light-bg">
 			<div class="container">
 			<div class="row">
@@ -336,7 +339,7 @@
 			</div>
 			</div><!-- end container -->
 		</section>
-		<section>
+		<!--<section>
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 text-center">
@@ -374,7 +377,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>-->
 		<section id="team" class="light-bg">
 			<div class="container">
 				<div class="row">
