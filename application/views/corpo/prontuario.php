@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+
     <title>Tela de cadastro</title>
   </head>
   <body>
@@ -136,15 +137,16 @@
     $(element).submit(function(event){
         event.preventDefault();
         $.post('Prontuario/salvar', $(element).serialize(), function (resposta){
-            if(resposta == "true"){
-               
+            console.log(resposta)
+            if(resposta){
+              
                 $('.s').each((index, element) => {
                     $(element).attr('class', 'alert alert-success');
                 });
 
                 setTimeout(() => {
                     window.location.href = window.location.href
-                }, 100);
+                }, 1000);
                 // $('.s').each((index, element) => {
                    
                     

@@ -53,6 +53,8 @@ $route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['login'] = 'Login';
+
 $route['index-corpo'] = 'Admin';
 
 $route['agenda-cad'] = 'Controler_cad_agenda';

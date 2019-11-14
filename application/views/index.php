@@ -38,9 +38,9 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand page-scroll" href="#page-top">
+					<!--<a class="navbar-brand page-scroll" href="#page-top">
 						<img width="200" height="100" src="<?php echo base_url(); ?>public/images/SEC.png"  alt="Lattes theme logo">
-					</a>
+					</a>-->
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -143,64 +143,65 @@
 			</div>
 			<!-- /.container -->
 		</section>
-		<!--<section >
+
+		<section >
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
 						<div class="skills-text">
-							<h2>WE`RE CREATIVE</h2>
+							<h2>Nosso Planos</h2>
 							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.<br><br>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur?</p>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<!-- skill bar item -->
-						<!--<div class="skillbar-item">
-							<div class="skillbar-score">
+						<div class="skillbar-item">
+							<!--<div class="skillbar-score">
 								<span class="score">90</span><span class="percent">%</span>
-							</div>
-							<div class="skillbar" data-percent="90%">
-								<h3>Web design</h3>
+							</div>-->
+							<div class="skillbar" data-percent="100%">
+								<h3>Agenda</h3>
 								<div class="skillbar-bar">
-									<div class="skillbar-percent" style="width: 90%;">
+									<div class="skillbar-percent" style="width: 100%;">
 									</div>
 								</div>
 							</div>
 						</div>
-						<!-- skill bar item 
-						<div class="skillbar-item">
-							<div class="skillbar-score">
-								<span class="score">80</span><span class="percent">%</span>
-							</div>
-							<div class="skillbar" data-percent="80%">
-								<h3>Development</h3>
-								<div class="skillbar-bar">
-									<div class="skillbar-percent" style="width: 80%;">
-									</div>
-								</div>
-							</div>
-						</div>-->
-						<!-- skill bar item 
-						<div class="skillbar-item">
-							<div class="skillbar-score">
-								<span class="score">85</span><span class="percent">%</span>
-							</div>
-							<div class="skillbar" data-percent="85%">
-								<h3>Photography</h3>
-								<div class="skillbar-bar">
-									<div class="skillbar-percent" style="width: 85%;">
-									</div>
-								</div>
-							</div>
-						</div>-->
 						<!-- skill bar item -->
-						<!--<div class="skillbar-item">
-							<div class="skillbar-score">
-								<span class="score">70</span><span class="percent">%</span>
-							</div>
-							<div class="skillbar" data-percent="70%">
-								<h3>Marketing</h3>
+						<div class="skillbar-item">
+							<!--<div class="skillbar-score">
+								<span class="score">80</span><span class="percent">%</span>
+							</div>-->
+							<div class="skillbar" data-percent="100%">
+								<h3>Cadastro de Paciente</h3>
 								<div class="skillbar-bar">
-									<div class="skillbar-percent" style="width: 70%;">
+									<div class="skillbar-percent" style="width: 100%;">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- skill bar item -->
+						<div class="skillbar-item">
+							<!--<div class="skillbar-score">
+								<span class="score">85</span><span class="percent">%</span>
+							</div>-->
+							<div class="skillbar" data-percent="100%">
+								<h3>Prontuario Eletronico</h3>
+								<div class="skillbar-bar">
+									<div class="skillbar-percent" style="width: 100%;">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- skill bar item -->
+						<div class="skillbar-item">
+							<!--<div class="skillbar-score">
+								<span class="score">70</span><span class="percent">%</span>
+							</div>-->
+							<div class="skillbar" data-percent="100%">
+								<h3>Gerar Relatoios</h3>
+								<div class="skillbar-bar">
+									<div class="skillbar-percent" style="width: 100%;">
 									</div>
 								</div>
 							</div>
@@ -208,7 +209,8 @@
 					</div>
 				</div>
 			</div>
-		</section>-->
+		</section>
+
 		<!--<section class="overlay-dark bg-img1 dark-bg short-section">
 			<div class="container text-center">
 				<div class="row">
@@ -244,8 +246,8 @@
 			<div class="row">
 				<div class="col-lg-12 text-center">
 					<div class="section-title">
-						<h2>Portfolio</h2>
-						<p>Our portfolio is the best way to show our work, you can see here a big range of our work. Check them all and you will find what you are looking for.</p>
+						<h2>Funcionalidades</h2>
+						<p>Algumas funcionalidades do sistema SEconsult</p>
 					</div>
 				</div>
 			</div>
@@ -254,10 +256,10 @@
 				<div class="col-md-4">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="<?php echo base_url(); ?>public/images/demo/portfolio-1.jpg" alt="img02" class="img-responsive" />
+							<img src="<?php echo base_url(); ?>public/images/portifolio/pdf.png" alt="img02" class="img-responsive" />
 							<figcaption>
-								<h2>Cadastro de agenda</h2>
-								<p>Texto, Texto</p>
+								<h2>Cadastro de prontuario</h2>
+								<p></p>
 								<a href="#" data-toggle="modal" data-target="#Modal-1">View more</a>
 							</figcaption>
 						</figure>
@@ -268,10 +270,10 @@
 				<div class="col-md-4">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="<?php echo base_url(); ?>public/images/demo/portfolio-2.jpg" alt="img02" class="img-responsive" />
+							<img src="<?php echo base_url(); ?>public/images/portifolio/relatorio.png" alt="img02" class="img-responsive" />
 							<figcaption>
 								<h2>Geração de relatorios</h2>
-								<p>Texto, Texto</p>
+								<p></p>
 								<a href="#" data-toggle="modal" data-target="#Modal-2">View more</a>
 							</figcaption>
 						</figure>
@@ -282,10 +284,10 @@
 				<div class="col-md-4">
 					<div class="ot-portfolio-item">
 						<figure class="effect-bubba">
-							<img src="<?php echo base_url(); ?>public/images/demo/portfolio-3.jpg" alt="img02" class="img-responsive" />
+							<img src="<?php echo base_url(); ?>public/images/portifolio/Agenda.png" alt="img02" class="img-responsive" />
 							<figcaption>
-								<h2>Cadastro de prontuarios</h2>
-								<p>Texto, Texto</p>
+								<h2>Agenda</h2>
+								<p></p>
 								<a href="#" data-toggle="modal" data-target="#Modal-3">View more</a>
 							</figcaption>
 						</figure>
@@ -384,13 +386,13 @@
 					<div class="col-lg-12 text-center">
 						<div class="section-title">
 							<h2>Nosso time</h2>
-							<p>A creative agency based on Candy Land, ready to boost your business with some beautifull templates. Lattes Agency is one of the best in town see more you will be amazed.</p>
+							<p></p>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<!-- team member item -->
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<div class="team-item">
 							<div class="team-image">
 								<img src="<?php echo base_url(); ?>public/images/demo/author-2.jpg" class="img-responsive" alt="author">
@@ -405,10 +407,10 @@
 					</div>
 					<!-- end team member item -->
 					<!-- team member item -->
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<div class="team-item">
 							<div class="team-image">
-								<img src="<?php echo base_url(); ?>public/images/demo/author-6.jpg" class="img-responsive" alt="author">
+								<img src="<?php echo base_url(); ?>public/images/demo/author-2.jpg" class="img-responsive" alt="author">
 							</div>
 							<div class="team-text">
 								<h3>Wesley Junior</h3>
@@ -420,12 +422,12 @@
 					</div>
 					<!-- end team member item -->
 					<!-- team member item -->
-					<div class="col-md-3">
+					<div class="col-md-4" align="justify">
 						<div class="team-item">
 							<div class="team-image">
 								<img src="<?php echo base_url(); ?>public/images/demo/author-3.jpg" class="img-responsive" alt="author">
 							</div>
-							<div class="team-text">
+							<div class="team-text" >
 								<h3>Walter Bernardino</h3>
 								<div class="team-location">Jardim, Brasil</div>
 								<div class="team-position">– Desenvolvedor –</div>
@@ -435,7 +437,7 @@
 					</div>
 					<!-- end team member item -->
 					<!-- team member item -->
-					<div class="col-md-3">
+					<!--<div class="col-md-3">
 						<div class="team-item">
 							<div class="team-image">
 								<img src="<?php echo base_url(); ?>public/images/demo/author-4.jpg" class="img-responsive" alt="author">
@@ -447,7 +449,7 @@
 								<p>Texto para adicionar aqui a respeito do orientador de projeto texto texto texto tetxto texto</p>
 							</div>
 						</div>
-					</div>
+					</div>-->
 					<!-- end team member item -->
 				</div>
 			</div>
@@ -463,28 +465,33 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<h3>Nosso endereço</h3>
 						<p>3422 Street, Barcelona 432, Spain, New Building North, 15th Floor</p>
 						<p><i class="fa fa-phone"></i> +55 (00)00000-0000</p>
 						<p><i class="fa fa-envelope"></i> Seconsult@gmail.com</p>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-4">
 						<h3>Horario comercial</h3>
 						<p><i class="fa fa-clock-o"></i> <span class="day">Dias uteis:</span><span>8am as 5pm</span></p>
 						<p><i class="fa fa-clock-o"></i> <span class="day">Sabado:</span><span>8am to 2pm</span></p>
 						<p><i class="fa fa-clock-o"></i> <span class="day">Domingo e feriados:</span><span>Fechado</span></p>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-4" >
+						<h3>Help desk</h3>
+						<p><i class="fa fa-clock-o"></i> <span class="day">Dias uteis:</span><span>8am as 5pm</span></p>
+						
+					</div>
+					<!--<div class="col-md-6">
 						<form name="sentMessage" id="contactForm" novalidate="">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Seu nome *" id="name" required="" data-validation-required-message="Please enter your name.">
-										<p class="help-block text-danger"></p>
+										
+										<p class="help-block text-danger">Em caso de perca do E-mail ou senha entrar em contato com </p>
 									</div>
-								</div>
-								<div class="col-md-6">
+								</div>-->
+								<!--<div class="col-md-6">
 									<div class="form-group">
 										<input type="email" class="form-control" placeholder="Seu email *" id="email" required="" data-validation-required-message="Please enter your email address.">
 										<p class="help-block text-danger"></p>
@@ -505,7 +512,7 @@
 									<div id="success"></div>
 									<button type="submit" class="btn">Enviar mensagem</button>
 								</div>
-							</div>
+							</div>-->
 						</form>
 					</div>
 				</div>
@@ -516,7 +523,7 @@
 		</p>
 		<footer>
 			<div class="container text-center">
-				<p>Designed by <a href="http://moozthemes.com"><span>MOOZ</span>Themes.com</a></p>
+				<p>Copyright &copy; SEconsult 2019</p>
 			</div>
 		</footer>
 
@@ -526,15 +533,15 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="Modal-label-1">Cadastro de agenda</h4>
+						<h4 class="modal-title" id="Modal-label-1">Cadastro de prontuario</h4>
 					</div>
 					<div class="modal-body">
-						<img src="<?php echo base_url(); ?>public/images/demo/portfolio-1.jpg" alt="img01" class="img-responsive" />
-						<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
-						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
+						<img src="<?php echo base_url(); ?>public/images/portifolio/pdf.png" alt="img01" class="img-responsive" />
+						<!--<div class="modal-works"><span>Branding</span><span>Web Design</span></div>-->
+						<p>O sistema SEconsult permite ao psicólogo a gerar PDF apartir dos prontuarios cadastrados</p>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
 					</div>
 				</div>
 			</div>
@@ -549,12 +556,12 @@
 						<h4 class="modal-title" id="Modal-label-2">Geração de relatorio</h4>
 					</div>
 					<div class="modal-body">
-						<img src="<?php echo base_url(); ?>public/images/demo/portfolio-2.jpg" alt="img01" class="img-responsive" />
-						<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
-						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
+						<img src="<?php echo base_url(); ?>public/images/portifolio/relatorio.png" alt="img01" class="img-responsive" />
+						<!--<div class="modal-works"><span>Branding</span><span>Web Design</span></div>-->
+						<p>O sistema SEconsult gera relatorios para melhor acompanhamento das consultas</p>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
 					</div>
 				</div>
 			</div>
@@ -566,15 +573,15 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="Modal-label-3">Cadastro de prontuarios</h4>
+						<h4 class="modal-title" id="Modal-label-3">Agenda</h4>
 					</div>
 					<div class="modal-body">
-						<img src="<?php echo base_url(); ?>public/images/demo/portfolio-3.jpg" alt="img01" class="img-responsive" />
-						<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
-						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
+						<img src="<?php echo base_url(); ?>public/images/portifolio/agenda.png" alt="img01" class="img-responsive" />
+						<!--<div class="modal-works"><span>Branding</span><span>Web Design</span></div>-->
+						<p>O sistema SEconslut possui uma agenda intuitiva, gerando agilidade na hora do cadastro das consultas</p>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
 					</div>
 				</div>
 			</div>

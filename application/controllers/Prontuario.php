@@ -61,11 +61,11 @@ class Prontuario extends CI_Controller{
         $this->load->model('Prontuario_model');
         $dados = array (
             'id' => $this->input->post('id'),
-            'prontuario' => $this->input->post('prontuario')
+            'prontuario' => base64_encode($this->input->post('prontuario'))
         );
 
         $r = $this->Prontuario_model->insertProtuario($dados['id'],$dados['prontuario']);
-        echo Json_encode($r);
+        echo json_encode($r);
 
     }
 

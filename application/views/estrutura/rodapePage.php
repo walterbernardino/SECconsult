@@ -32,6 +32,7 @@
 </div>
 
 <!-- Bootstrap core JavaScript-->
+<script src="<?php echo base_url('bootstrap/js/demo/chart-pie-demo.js'); ?>"></script>
 <script src="<?php echo base_url('bootstrap/vendor/jquery/jquery.min.js'); ?>"></script>
 <script src="<?php echo base_url('bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 
@@ -41,13 +42,16 @@
 <!-- Custom scripts for all pages-->
 <script language="JavaScript" type="text/javascript" src="<?php echo base_url('bootstrap/js/sb-admin-2.min.js'); ?>"></script>
 <!-- Page level plugins -->
-<script src="<?php echo base_url('bootstrap/vendor/datatables/jquery.dataTables.min.js'); ?>"></script>
-<script src="<?php echo base_url('bootstrap/vendor/datatables/teste.js'); ?>"></script>
-<script src="<?php echo base_url('bootstrap/vendor/datatables/dataTables.bootstrap4.min.js'); ?>"></script>
+<!--<script src="<?php echo base_url('bootstrap/vendor/datatables/jquery.dataTables.min.js'); ?>"></script>-->
+<!--<script src="<?php echo base_url('bootstrap/vendor/datatables/jquery.dataTables.js'); ?>"></script>-->
+<script src="<?php echo base_url('bootstrap/vendor/datatables/jquery.dataTables1.js'); ?>"></script>
+<!--<script src="<?php echo base_url('bootstrap/vendor/datatables/teste.min.js'); ?>"></script>-->
+<!--<script src="<?php echo base_url('bootstrap/vendor/datatables/dataTables.bootstrap4.min.js'); ?>"></script>-->
+<script src="<?php echo base_url('bootstrap/vendor/datatables/dataTables.bootstrap4.min1.js'); ?>"></script>
 
 <!-- Page level custom scripts -->
 <script src="<?php echo base_url('bootstrap/js/demo/datatables-demo.js'); ?>"></script>
-<script src="<?php echo base_url('bootstrap/js/demo/chart-pie-demo.js'); ?>"></script>
+
 
 </body>
 

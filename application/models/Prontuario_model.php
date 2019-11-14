@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 class Prontuario_model extends CI_Model{
 

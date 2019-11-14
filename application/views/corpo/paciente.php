@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -53,7 +53,7 @@ b{
 <h1>PRONTUÁRIOS</h1>
 
 <?php foreach ($prontuario as $key):?>
-<p><?=$key['prontuario']?></p>
+<p><?php echo base64_decode($key['prontuario'])?></p>
 <p><?=$key['creat_at']?></p>
 <hr>
 <?php endforeach;?>
