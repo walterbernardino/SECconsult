@@ -23,51 +23,7 @@
 		<script src='locale/pt-br.js'></script>
 
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-
-		<style>
-
-#wrap {
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
-}
-  #external-events {
-    /*float: left;*/
-    width: 150px;
-    margin-right: 20px;
-    /*padding: 0 10px;*/
-    border: 1px solid #ccc;
-    background: #eee;
-    text-align: center;
-  }
-
-  #external-events h4 {
-    font-size: 13px;
-    margin-top: 0;
-    padding-top: 1em;
-  }
-
-  #external-events .fc-event {
-    margin: 15px 0px;
-    cursor: pointer;
-  }
-
-  #external-events p {
-    margin: 1.5em 0;
-    font-size: 11px;
-    color: #666;
-  }
-
-  #external-events p input {
-    margin: 0;
-    vertical-align: middle;
-  }
-
-  #calendar {
-    float: right;
-  }
-
-</style>
+		
 		<script>
 
 			$(document).ready(function() {
@@ -140,24 +96,7 @@
 			}
 			?>
 		
-	<div id='wrap'>
-    <div id='external-events'>
-      <h4>Legenda</h4>
-
-      <div id='external-events-list'>
-        <div class='fc-event' style="background: yellow; color: black;">A confirmar</div>
-        <div class='fc-event' style="background: red; color: black;">Cancelados</div>
-        <div class='fc-event' style="background: green; color: black;">Confirmado</div>
-        <div class='fc-event' style="background: blue; color: black;">Reagendado</div>
-      </div> 
-    </div>
-	</div>
-
-    <div id='calendar'></div>
-
-    <div style='clear:both'></div>
-
-  </div>
+			<div id='calendar'></div>
 		</div>
 
 		<div class="modal fade bd-example-modal-lg" id="visualizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-backdrop="static">

@@ -14,7 +14,7 @@ class Admin extends CI_Controller {
         $this->load->model("pessoa_model");
 
         $dt['tipo'] = $this->pessoa_model->getTipo();
-
+        $dt['resumo'] = 'true';
         $dt2 = $this->pessoa_model->getTipo();
         if ($dt2['tipo'] == 0) {
 
